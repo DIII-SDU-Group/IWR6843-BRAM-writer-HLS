@@ -6,8 +6,8 @@
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>
-      <arg id="1" access_type="w" src_name="buffer_out" src_type="ap_uint&lt;128&gt;*" src_isptr="1" src_bitwidth="128" src_size_or_depth="33">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="buffer_out" hw_bitwidth="128" hw_size_or_depth="33">
+      <arg id="1" access_type="w" src_name="buffer_out" src_type="unsigned int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="129">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="buffer_out" hw_bitwidth="32" hw_size_or_depth="129">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>

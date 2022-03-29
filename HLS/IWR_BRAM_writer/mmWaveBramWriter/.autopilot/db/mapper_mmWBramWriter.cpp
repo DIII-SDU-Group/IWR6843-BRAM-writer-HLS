@@ -33,7 +33,7 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 struct __cosim_s10__ { char data[16]; };
-extern "C" void mmWBramWriter(__cosim_s10__*, __cosim_s10__*);
+extern "C" void mmWBramWriter(__cosim_s10__*, int*);
 extern "C" void apatb_mmWBramWriter_hw(volatile void * __xlx_apatb_param_buffer_in, volatile void * __xlx_apatb_param_buffer_out) {
   // Collect __xlx_buffer_in__tmp_vec
   vector<sc_bv<128> >__xlx_buffer_in__tmp_vec;
@@ -52,20 +52,16 @@ extern "C" void apatb_mmWBramWriter_hw(volatile void * __xlx_apatb_param_buffer_
     ((long long*)__xlx_buffer_in__input_buffer)[i*2+1] = __xlx_buffer_in__tmp_vec[i].range(127, 64).to_uint64();
   }
   // Collect __xlx_buffer_out__tmp_vec
-  vector<sc_bv<128> >__xlx_buffer_out__tmp_vec;
-  for (int j = 0, e = 33; j != e; ++j) {
-    sc_bv<128> _xlx_tmp_sc;
-    _xlx_tmp_sc.range(63, 0) = ((long long*)__xlx_apatb_param_buffer_out)[j*2+0];
-    _xlx_tmp_sc.range(127, 64) = ((long long*)__xlx_apatb_param_buffer_out)[j*2+1];
-    __xlx_buffer_out__tmp_vec.push_back(_xlx_tmp_sc);
+  vector<sc_bv<32> >__xlx_buffer_out__tmp_vec;
+  for (int j = 0, e = 129; j != e; ++j) {
+    __xlx_buffer_out__tmp_vec.push_back(((int*)__xlx_apatb_param_buffer_out)[j]);
   }
-  int __xlx_size_param_buffer_out = 33;
+  int __xlx_size_param_buffer_out = 129;
   int __xlx_offset_param_buffer_out = 0;
-  int __xlx_offset_byte_param_buffer_out = 0*16;
-  __cosim_s10__* __xlx_buffer_out__input_buffer= new __cosim_s10__[__xlx_buffer_out__tmp_vec.size()];
+  int __xlx_offset_byte_param_buffer_out = 0*4;
+  int* __xlx_buffer_out__input_buffer= new int[__xlx_buffer_out__tmp_vec.size()];
   for (int i = 0; i < __xlx_buffer_out__tmp_vec.size(); ++i) {
-    ((long long*)__xlx_buffer_out__input_buffer)[i*2+0] = __xlx_buffer_out__tmp_vec[i].range(63, 0).to_uint64();
-    ((long long*)__xlx_buffer_out__input_buffer)[i*2+1] = __xlx_buffer_out__tmp_vec[i].range(127, 64).to_uint64();
+    __xlx_buffer_out__input_buffer[i] = __xlx_buffer_out__tmp_vec[i].range(31, 0).to_uint64();
   }
   // DUT call
   mmWBramWriter(__xlx_buffer_in__input_buffer, __xlx_buffer_out__input_buffer);
@@ -81,14 +77,11 @@ extern "C" void apatb_mmWBramWriter_hw(volatile void * __xlx_apatb_param_buffer_
     ((long long*)__xlx_apatb_param_buffer_in)[i*2+1] = __xlx_buffer_in_output_buffer[i].range(127, 64).to_uint64();
   }
 // print __xlx_apatb_param_buffer_out
-  sc_bv<128>*__xlx_buffer_out_output_buffer = new sc_bv<128>[__xlx_size_param_buffer_out];
+  sc_bv<32>*__xlx_buffer_out_output_buffer = new sc_bv<32>[__xlx_size_param_buffer_out];
   for (int i = 0; i < __xlx_size_param_buffer_out; ++i) {
-    char* start = (char*)(&(__xlx_buffer_out__input_buffer[__xlx_offset_param_buffer_out]));
-    __xlx_buffer_out_output_buffer[i].range(63, 0) = ((long long*)start)[i*2+0];
-    __xlx_buffer_out_output_buffer[i].range(127, 64) = ((long long*)start)[i*2+1];
+    __xlx_buffer_out_output_buffer[i] = __xlx_buffer_out__input_buffer[i+__xlx_offset_param_buffer_out];
   }
   for (int i = 0; i < __xlx_size_param_buffer_out; ++i) {
-    ((long long*)__xlx_apatb_param_buffer_out)[i*2+0] = __xlx_buffer_out_output_buffer[i].range(63, 0).to_uint64();
-    ((long long*)__xlx_apatb_param_buffer_out)[i*2+1] = __xlx_buffer_out_output_buffer[i].range(127, 64).to_uint64();
+    ((int*)__xlx_apatb_param_buffer_out)[i] = __xlx_buffer_out_output_buffer[i].to_uint64();
   }
 }

@@ -3,20 +3,21 @@
 # Memory (RAM/ROM)  definition:
 set ID 1
 set hasByteEnable 0
-set MemName mmWBramWriter_buffer_V
+set MemName mmWBramWriter_buffer_r
 set CoreName ap_simcore_mem
-set PortList { 2 3 }
-set DataWd 128
+set PortList { 1 }
+set DataWd 29
 set AddrRange 32
 set AddrWd 5
 set impl_style auto
 set TrueReset 0
-set HasInitializer 0
-set IsROM 0
-set ROMData {}
+set IsROM 1
+set ROMData { "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" "10110010101000011001000010000" }
+set HasInitializer 1
+set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
-set DelayBudget 1.352
+set DelayBudget 0.79
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -31,7 +32,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 2 \
+    port_num 1 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -54,10 +55,10 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set CoreName RAM
+set CoreName ROM
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RAM"} {
-    eval "::AESL_LIB_VIRTEX::xil_gen_RAM { \
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_ROM"} {
+    eval "::AESL_LIB_VIRTEX::xil_gen_ROM { \
     id ${ID} \
     name ${MemName} \
     corename ${CoreName}  \
@@ -67,7 +68,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 2 \
+    port_num 1 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -80,7 +81,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
     rom_data \{${ROMData}\} \
  } "
   } else {
-    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_RAM, check your platform lib"
+    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_ROM, check your platform lib"
   }
 }
 
@@ -153,7 +154,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename buffer_out \
     op interface \
-    ports { buffer_out_address0 { O 6 vector } buffer_out_ce0 { O 1 bit } buffer_out_we0 { O 1 bit } buffer_out_d0 { O 128 vector } } \
+    ports { buffer_out_address0 { O 8 vector } buffer_out_ce0 { O 1 bit } buffer_out_we0 { O 1 bit } buffer_out_d0 { O 32 vector } buffer_out_address1 { O 8 vector } buffer_out_ce1 { O 1 bit } buffer_out_we1 { O 1 bit } buffer_out_d1 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'buffer_out'"

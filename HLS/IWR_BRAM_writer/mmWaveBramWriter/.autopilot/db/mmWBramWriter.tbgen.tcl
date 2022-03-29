@@ -13,23 +13,27 @@ set C_modelName {mmWBramWriter}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ buffer_in int 128 regular {array 32 { 1 3 } 1 1 }  }
-	{ buffer_out int 128 regular {array 33 { 0 3 } 0 1 }  }
+	{ buffer_out int 32 regular {array 129 { 0 0 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "buffer_in", "interface" : "memory", "bitwidth" : 128, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "buffer_in","cData": "int128","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "buffer_out", "interface" : "memory", "bitwidth" : 128, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "buffer_out","cData": "int128","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
+ 	{ "Name" : "buffer_out", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "buffer_out","cData": "int","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 27
+set portNum 31
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
 	{ buffer_in_address0 sc_out sc_lv 5 signal 0 } 
 	{ buffer_in_ce0 sc_out sc_logic 1 signal 0 } 
 	{ buffer_in_q0 sc_in sc_lv 128 signal 0 } 
-	{ buffer_out_address0 sc_out sc_lv 6 signal 1 } 
+	{ buffer_out_address0 sc_out sc_lv 8 signal 1 } 
 	{ buffer_out_ce0 sc_out sc_logic 1 signal 1 } 
 	{ buffer_out_we0 sc_out sc_logic 1 signal 1 } 
-	{ buffer_out_d0 sc_out sc_lv 128 signal 1 } 
+	{ buffer_out_d0 sc_out sc_lv 32 signal 1 } 
+	{ buffer_out_address1 sc_out sc_lv 8 signal 1 } 
+	{ buffer_out_ce1 sc_out sc_logic 1 signal 1 } 
+	{ buffer_out_we1 sc_out sc_logic 1 signal 1 } 
+	{ buffer_out_d1 sc_out sc_lv 32 signal 1 } 
 	{ s_axi_control_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_AWREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_AWADDR sc_in sc_lv 4 signal -1 } 
@@ -73,10 +77,14 @@ set NewPortList {[
  	{ "name": "buffer_in_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "buffer_in", "role": "address0" }} , 
  	{ "name": "buffer_in_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_in", "role": "ce0" }} , 
  	{ "name": "buffer_in_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":128, "type": "signal", "bundle":{"name": "buffer_in", "role": "q0" }} , 
- 	{ "name": "buffer_out_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "buffer_out", "role": "address0" }} , 
+ 	{ "name": "buffer_out_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "buffer_out", "role": "address0" }} , 
  	{ "name": "buffer_out_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "ce0" }} , 
  	{ "name": "buffer_out_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "we0" }} , 
- 	{ "name": "buffer_out_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":128, "type": "signal", "bundle":{"name": "buffer_out", "role": "d0" }}  ]}
+ 	{ "name": "buffer_out_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_out", "role": "d0" }} , 
+ 	{ "name": "buffer_out_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "buffer_out", "role": "address1" }} , 
+ 	{ "name": "buffer_out_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "ce1" }} , 
+ 	{ "name": "buffer_out_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "we1" }} , 
+ 	{ "name": "buffer_out_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_out", "role": "d1" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
@@ -94,15 +102,17 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "buffer_in", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buffer_out", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buffer_V_U", "Parent" : "0"}]}
+			{"Name" : "buffer_out", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "buffer_r", "Type" : "Memory", "Direction" : "I"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buffer_r_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	mmWBramWriter {
 		buffer_in {Type I LastRead 1 FirstWrite -1}
-		buffer_out {Type O LastRead -1 FirstWrite 2}}}
+		buffer_out {Type O LastRead -1 FirstWrite 2}
+		buffer_r {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -113,12 +123,11 @@ set PerformanceInfo {[
 
 set PipelineEnableSignalInfo {[
 	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
-	{"Pipeline" : "1", "EnableSignal" : "ap_enable_pp1"}
 ]}
 
 set Spec2ImplPortList { 
 	buffer_in { ap_memory {  { buffer_in_address0 mem_address 1 5 }  { buffer_in_ce0 mem_ce 1 1 }  { buffer_in_q0 mem_dout 0 128 } } }
-	buffer_out { ap_memory {  { buffer_out_address0 mem_address 1 6 }  { buffer_out_ce0 mem_ce 1 1 }  { buffer_out_we0 mem_we 1 1 }  { buffer_out_d0 mem_din 1 128 } } }
+	buffer_out { ap_memory {  { buffer_out_address0 mem_address 1 8 }  { buffer_out_ce0 mem_ce 1 1 }  { buffer_out_we0 mem_we 1 1 }  { buffer_out_d0 mem_din 1 32 }  { buffer_out_address1 MemPortADDR2 1 8 }  { buffer_out_ce1 MemPortCE2 1 1 }  { buffer_out_we1 MemPortWE2 1 1 }  { buffer_out_d1 MemPortDIN2 1 32 } } }
 }
 
 set busDeadlockParameterList { 

@@ -1,6 +1,6 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'ffn' on host 'adm-59955.adm.c.sdu.dk' (Linux_x86_64 version 5.13.0-37-generic) on Tue Mar 29 16:51:32 CEST 2022
+INFO: [HLS 200-10] For user 'ffn' on host 'adm-59955.adm.c.sdu.dk' (Linux_x86_64 version 5.13.0-37-generic) on Tue Mar 29 17:32:11 CEST 2022
 INFO: [HLS 200-10] On os Ubuntu 20.04.3 LTS
 INFO: [HLS 200-10] In directory '/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS'
 Sourcing Tcl script '/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS/IWR_BRAM_writer/mmWaveBramWriter/export.tcl'
@@ -35,6 +35,6 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 29 16:51:41 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 29 17:32:19 2022...
 INFO: [HLS 200-802] Generated output file /home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/IP/mmWBramWriter.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 9.62 seconds. CPU system time: 0.72 seconds. Elapsed time: 11.03 seconds; current allocated memory: 92.136 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 9.39 seconds. CPU system time: 0.8 seconds. Elapsed time: 10.85 seconds; current allocated memory: 92.241 MB.

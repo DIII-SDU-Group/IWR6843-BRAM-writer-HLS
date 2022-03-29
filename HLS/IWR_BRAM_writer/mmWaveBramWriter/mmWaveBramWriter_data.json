@@ -47,8 +47,8 @@
     "buffer_out": {
       "index": "1",
       "direction": "out",
-      "srcType": "ap_uint<128>*",
-      "srcSize": "128",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
       "hwRefs": [
         {
           "type": "port",
@@ -75,6 +75,34 @@
           "type": "port",
           "interface": "buffer_out_d0",
           "name": "buffer_out_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "buffer_out_address1",
+          "name": "buffer_out_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "buffer_out_ce1",
+          "name": "buffer_out_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "buffer_out_we1",
+          "name": "buffer_out_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "buffer_out_d1",
+          "name": "buffer_out_d1",
           "usage": "data",
           "direction": "out"
         }
@@ -120,12 +148,13 @@
   "Files": {
     "CSource": ["..\/..\/mmWaveBramWriter.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/mmWBramWriter_buffer_V.vhd",
+      "impl\/vhdl\/mmWBramWriter_buffer_r.vhd",
       "impl\/vhdl\/mmWBramWriter_control_s_axi.vhd",
       "impl\/vhdl\/mmWBramWriter.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/mmWBramWriter_buffer_V.v",
+      "impl\/verilog\/mmWBramWriter_buffer_r.v",
+      "impl\/verilog\/mmWBramWriter_buffer_r_rom.dat",
       "impl\/verilog\/mmWBramWriter_control_s_axi.v",
       "impl\/verilog\/mmWBramWriter.v"
     ],
@@ -201,9 +230,23 @@
       "type": "data",
       "busTypeName": "data",
       "mode": "master",
-      "dataWidth": "6",
+      "dataWidth": "8",
       "portMap": {"buffer_out_address0": "DATA"},
       "ports": ["buffer_out_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "buffer_out"
+        }]
+    },
+    "buffer_out_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "8",
+      "portMap": {"buffer_out_address1": "DATA"},
+      "ports": ["buffer_out_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
@@ -215,9 +258,23 @@
       "type": "data",
       "busTypeName": "data",
       "mode": "master",
-      "dataWidth": "128",
+      "dataWidth": "32",
       "portMap": {"buffer_out_d0": "DATA"},
       "ports": ["buffer_out_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "buffer_out"
+        }]
+    },
+    "buffer_out_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"buffer_out_d1": "DATA"},
+      "ports": ["buffer_out_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
@@ -520,7 +577,7 @@
     },
     "buffer_out_address0": {
       "dir": "out",
-      "width": "6"
+      "width": "8"
     },
     "buffer_out_ce0": {
       "dir": "out",
@@ -532,7 +589,23 @@
     },
     "buffer_out_d0": {
       "dir": "out",
-      "width": "128"
+      "width": "32"
+    },
+    "buffer_out_address1": {
+      "dir": "out",
+      "width": "8"
+    },
+    "buffer_out_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "buffer_out_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "buffer_out_d1": {
+      "dir": "out",
+      "width": "32"
     }
   },
   "ModuleInfo": {
@@ -570,18 +643,18 @@
             "Name": "write_loop",
             "TripCount": "",
             "Latency": "",
-            "PipelineII": "1",
+            "PipelineII": "",
             "PipelineDepth": "2"
           }
         ],
         "Area": {
-          "BRAM_18K": "4",
+          "BRAM_18K": "0",
           "AVAIL_BRAM": "432",
-          "UTIL_BRAM": "~0",
-          "FF": "161",
+          "UTIL_BRAM": "0",
+          "FF": "187",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "380",
+          "LUT": "427",
           "AVAIL_LUT": "70560",
           "UTIL_LUT": "~0",
           "DSP": "0",
@@ -596,7 +669,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-29 16:51:24 CEST",
+    "Time": "2022-03-29 17:31:53 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

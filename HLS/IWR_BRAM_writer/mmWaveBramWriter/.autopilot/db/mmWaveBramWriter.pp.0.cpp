@@ -5803,13 +5803,11 @@ typedef __uintmax_t uintmax_t;
 
 uint32_t loadBuffer(ap_uint<128> buffer_in[32], ap_uint<128> buffer[32]);
 
+void writeBuffer(ap_uint<128> buffer[32], uint32_t buffer_out[32*4+1], int n_points);
 
-void writeBuffer(ap_uint<128> buffer[32], ap_uint<128> buffer_out[32 +1], int n_points);
-
-__attribute__((sdx_kernel("mmWBramWriter", 0))) void mmWBramWriter(ap_uint<128> buffer_in[32], ap_uint<128> buffer_out[32 +1]) {_ssdm_SpecArrayDimSize(buffer_in, 32);_ssdm_SpecArrayDimSize(buffer_out, 33);
+__attribute__((sdx_kernel("mmWBramWriter", 0))) void mmWBramWriter(ap_uint<128> buffer_in[32], uint32_t buffer_out[32*4+1]) {_ssdm_SpecArrayDimSize(buffer_in, 32);_ssdm_SpecArrayDimSize(buffer_out, 129);
 #pragma HLS TOP name=mmWBramWriter
-# 12 "mmWaveBramWriter.cpp"
-
+# 11 "mmWaveBramWriter.cpp"
 
 #pragma HLS INTERFACE ap_memory port=buffer_in
 #pragma HLS INTERFACE ap_memory port=buffer_out
@@ -5836,21 +5834,31 @@ uint32_t loadBuffer(ap_uint<128> buffer_in[32], ap_uint<128> buffer[32]) {
 
   }
 
-  buffer[i] = buffer_in[i];
+  ap_uint<128> test_val("0123456789ABCDEFFEDCBA9876543210", 16);
+
+  buffer[i] = test_val;
 
  }
 
  return n_points;
 }
 
-void writeBuffer(ap_uint<128> buffer[32], ap_uint<128> buffer_out[32 +1], int n_points) {
+void writeBuffer(ap_uint<128> buffer[32], uint32_t buffer_out[32*4+1], int n_points) {
 
+  ap_uint<128> shift_val_4("FFFFFFFF000000000000000000000000", 16);
+  ap_uint<128> shift_val_3("00000000FFFFFFFF0000000000000000", 16);
+  ap_uint<128> shift_val_2("0000000000000000FFFFFFFF00000000", 16);
+  ap_uint<128> shift_val_1("000000000000000000000000FFFFFFFF", 16);
 
-  buffer_out[0] = (ap_uint<128>)n_points;
+  buffer_out[0] = (uint32_t)n_points;
 
   write_loop: for (int i = 0; i < n_points; i++) {
+#pragma HLS PIPELINE off
 
-   buffer_out[i+1] = buffer[i];
+ buffer_out[1+i*4] = (uint32_t)((buffer[i] >> 12*8) & shift_val_4);
+   buffer_out[1+i*4+1] = (uint32_t)((buffer[i] >> 8*8) & shift_val_3);
+   buffer_out[1+i*4+2] = (uint32_t)((buffer[i] >> 4*8) & shift_val_2);
+   buffer_out[1+i*4+3] = (uint32_t)((buffer[i] & shift_val_1));
 
   }
 
