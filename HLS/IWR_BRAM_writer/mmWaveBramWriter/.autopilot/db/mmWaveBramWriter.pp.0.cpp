@@ -5855,10 +5855,14 @@ void writeBuffer(ap_uint<128> buffer[32], uint32_t buffer_out[32*4+1], int n_poi
   write_loop: for (int i = 0; i < n_points; i++) {
 #pragma HLS PIPELINE off
 
- buffer_out[1+i*4] = (uint32_t)((buffer[i] >> 12*8) & shift_val_4);
-   buffer_out[1+i*4+1] = (uint32_t)((buffer[i] >> 8*8) & shift_val_3);
-   buffer_out[1+i*4+2] = (uint32_t)((buffer[i] >> 4*8) & shift_val_2);
-   buffer_out[1+i*4+3] = (uint32_t)((buffer[i] & shift_val_1));
+ buffer_out[1+i*4] = (uint32_t)(buffer[i].range(127, 96));
+
+   buffer_out[1+i*4] = (uint32_t)(buffer[i].range(95, 64));
+
+   buffer_out[1+i*4] = (uint32_t)(buffer[i].range(63, 32));
+
+   buffer_out[1+i*4] = (uint32_t)(buffer[i].range(31, 0));
+
 
   }
 

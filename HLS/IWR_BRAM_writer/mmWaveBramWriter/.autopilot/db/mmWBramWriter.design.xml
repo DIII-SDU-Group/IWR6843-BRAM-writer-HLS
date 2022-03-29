@@ -39,8 +39,8 @@
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<IterationLatency>4</IterationLatency>
-<PipelineDepth>4</PipelineDepth>
+<IterationLatency>2</IterationLatency>
+<PipelineDepth>2</PipelineDepth>
 </write_loop>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
@@ -49,10 +49,10 @@
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
-<FF>218</FF>
+<FF>187</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>428</LUT>
+<LUT>362</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <DSP>0</DSP>

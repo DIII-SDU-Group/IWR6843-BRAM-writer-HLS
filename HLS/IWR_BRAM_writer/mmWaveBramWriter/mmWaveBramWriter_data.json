@@ -572,17 +572,17 @@
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
-            "PipelineDepth": "4"
+            "PipelineDepth": "2"
           }
         ],
         "Area": {
           "BRAM_18K": "0",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "0",
-          "FF": "218",
+          "FF": "187",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "428",
+          "LUT": "362",
           "AVAIL_LUT": "70560",
           "UTIL_LUT": "~0",
           "DSP": "0",
@@ -597,7 +597,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-29 17:34:02 CEST",
+    "Time": "2022-03-29 17:55:51 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }
