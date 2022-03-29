@@ -49,10 +49,10 @@
 <BRAM_18K>4</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>~0</UTIL_BRAM>
-<FF>75</FF>
+<FF>77</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>620</LUT>
+<LUT>648</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <DSP>0</DSP>
@@ -362,7 +362,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>7</Bits>
+<Bits>8</Bits>
 <Attribute>address</Attribute>
 <CType>int</CType>
 </RtlPorts>

@@ -141,7 +141,7 @@ extern "C" void apatb_mmWBramWriter_hw(volatile void * __xlx_apatb_param_buffer_
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<32> > buffer_out_pc_buffer(128);
+          std::vector<sc_bv<32> > buffer_out_pc_buffer(129);
           int i = 0;
 
           rtl_tv_out_file >> AESL_token; //data
@@ -161,7 +161,7 @@ extern "C" void apatb_mmWBramWriter_hw(volatile void * __xlx_apatb_param_buffer_
           }
           if (i > 0) {{
             int i = 0;
-            for (int j = 0, e = 128; j < e; j += 1, ++i) {
+            for (int j = 0, e = 129; j < e; j += 1, ++i) {
             ((int*)__xlx_apatb_param_buffer_out)[j] = buffer_out_pc_buffer[i].to_int64();
           }}}
         } // end transaction
@@ -211,7 +211,7 @@ unsigned __xlx_offset_byte_param_buffer_out = 0;
   aesl_fh.write(AUTOTB_TVIN_buffer_out, __xlx_sprintf_buffer.data());
   {  __xlx_offset_byte_param_buffer_out = 0*4;
   if (__xlx_apatb_param_buffer_out) {
-    for (int j = 0  - 0, e = 128 - 0; j != e; ++j) {
+    for (int j = 0  - 0, e = 129 - 0; j != e; ++j) {
 sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
@@ -219,7 +219,7 @@ sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
       }
   }
 }
-  tcl_file.set_num(128, &tcl_file.buffer_out_depth);
+  tcl_file.set_num(129, &tcl_file.buffer_out_depth);
   sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
   aesl_fh.write(AUTOTB_TVIN_buffer_out, __xlx_sprintf_buffer.data());
 }
@@ -232,7 +232,7 @@ CodeState = DUMP_OUTPUTS;
   aesl_fh.write(AUTOTB_TVOUT_buffer_out, __xlx_sprintf_buffer.data());
   {  __xlx_offset_byte_param_buffer_out = 0*4;
   if (__xlx_apatb_param_buffer_out) {
-    for (int j = 0  - 0, e = 128 - 0; j != e; ++j) {
+    for (int j = 0  - 0, e = 129 - 0; j != e; ++j) {
 sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
@@ -240,7 +240,7 @@ sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
       }
   }
 }
-  tcl_file.set_num(128, &tcl_file.buffer_out_depth);
+  tcl_file.set_num(129, &tcl_file.buffer_out_depth);
   sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
   aesl_fh.write(AUTOTB_TVOUT_buffer_out, __xlx_sprintf_buffer.data());
 }

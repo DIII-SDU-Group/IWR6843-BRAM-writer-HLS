@@ -4,5 +4,5 @@
   <xd:arg xd:name="buffer_in_q0" xd:originalName="buffer_in_q0" xd:direction="in" xd:interfaceRef="buffer_in_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="128"/>
   <xd:arg xd:name="buffer_out_d0" xd:originalName="buffer_out_d0" xd:direction="out" xd:interfaceRef="buffer_out_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="164" xd:worst-case="164" xd:average-case="164"/>
-  <xd:resourceEstimates xd:LUT="620" xd:FF="75" xd:BRAM="4" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="648" xd:FF="77" xd:BRAM="4" xd:DSP="0"/>
 </xd:acceleratorMap>

@@ -153,7 +153,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename buffer_out \
     op interface \
-    ports { buffer_out_address0 { O 7 vector } buffer_out_ce0 { O 1 bit } buffer_out_we0 { O 1 bit } buffer_out_d0 { O 32 vector } } \
+    ports { buffer_out_address0 { O 8 vector } buffer_out_ce0 { O 1 bit } buffer_out_we0 { O 1 bit } buffer_out_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'buffer_out'"

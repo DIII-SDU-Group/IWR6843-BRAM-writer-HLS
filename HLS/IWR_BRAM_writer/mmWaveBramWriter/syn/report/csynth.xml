@@ -48,8 +48,8 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>4</BRAM_18K>
-            <FF>75</FF>
-            <LUT>620</LUT>
+            <FF>77</FF>
+            <LUT>648</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -360,7 +360,7 @@
             <IOProtocol>ap_memory</IOProtocol>
             <IOConfig/>
             <Dir>out</Dir>
-            <Bits>7</Bits>
+            <Bits>8</Bits>
             <Attribute>address</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -449,10 +449,10 @@
                     <BRAM_18K>4</BRAM_18K>
                     <AVAIL_BRAM>432</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>75</FF>
+                    <FF>77</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>620</LUT>
+                    <LUT>648</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <DSP>0</DSP>
@@ -762,7 +762,7 @@
                     <IOProtocol>ap_memory</IOProtocol>
                     <IOConfig/>
                     <Dir>out</Dir>
-                    <Bits>7</Bits>
+                    <Bits>8</Bits>
                     <Attribute>address</Attribute>
                     <CType>int</CType>
                 </RtlPorts>
@@ -869,7 +869,7 @@
                 <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="buffer_in"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="buffer_out_address0" type="data" busTypeName="data" mode="master" dataWidth="7">
+        <Interface InterfaceName="buffer_out_address0" type="data" busTypeName="data" mode="master" dataWidth="8">
             <portMaps>
                 <portMap portMapName="buffer_out_address0">DATA</portMap>
             </portMaps>
@@ -970,7 +970,7 @@
                     <keys size="2">Interface, Bitwidth</keys>
                     <column name="buffer_in_address0">5</column>
                     <column name="buffer_in_q0">128</column>
-                    <column name="buffer_out_address0">7</column>
+                    <column name="buffer_out_address0">8</column>
                     <column name="buffer_out_d0">32</column>
                 </table>
             </item>

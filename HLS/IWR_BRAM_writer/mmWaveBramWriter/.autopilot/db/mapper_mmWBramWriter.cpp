@@ -53,10 +53,10 @@ extern "C" void apatb_mmWBramWriter_hw(volatile void * __xlx_apatb_param_buffer_
   }
   // Collect __xlx_buffer_out__tmp_vec
   vector<sc_bv<32> >__xlx_buffer_out__tmp_vec;
-  for (int j = 0, e = 128; j != e; ++j) {
+  for (int j = 0, e = 129; j != e; ++j) {
     __xlx_buffer_out__tmp_vec.push_back(((int*)__xlx_apatb_param_buffer_out)[j]);
   }
-  int __xlx_size_param_buffer_out = 128;
+  int __xlx_size_param_buffer_out = 129;
   int __xlx_offset_param_buffer_out = 0;
   int __xlx_offset_byte_param_buffer_out = 0*4;
   int* __xlx_buffer_out__input_buffer= new int[__xlx_buffer_out__tmp_vec.size()];

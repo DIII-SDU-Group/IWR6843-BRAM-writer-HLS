@@ -11,22 +11,22 @@ target triple = "fpga64-xilinx-none"
 define void @apatb_mmWBramWriter_ir(%struct.ap_uint* %buffer_in, i32* %buffer_out) local_unnamed_addr #0 {
 entry:
   %buffer_in_copy = alloca [32 x %struct.ap_uint], align 512
-  %buffer_out_copy = alloca [128 x i32], align 512
+  %buffer_out_copy = alloca [129 x i32], align 512
   %0 = bitcast %struct.ap_uint* %buffer_in to [32 x %struct.ap_uint]*
-  %1 = bitcast i32* %buffer_out to [128 x i32]*
-  call fastcc void @copy_in([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [128 x i32]* %1, [128 x i32]* nonnull align 512 %buffer_out_copy)
+  %1 = bitcast i32* %buffer_out to [129 x i32]*
+  call fastcc void @copy_in([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [129 x i32]* %1, [129 x i32]* nonnull align 512 %buffer_out_copy)
   %2 = getelementptr inbounds [32 x %struct.ap_uint], [32 x %struct.ap_uint]* %buffer_in_copy, i32 0, i32 0
-  %3 = getelementptr inbounds [128 x i32], [128 x i32]* %buffer_out_copy, i32 0, i32 0
+  %3 = getelementptr inbounds [129 x i32], [129 x i32]* %buffer_out_copy, i32 0, i32 0
   call void @apatb_mmWBramWriter_hw(%struct.ap_uint* %2, i32* %3)
-  call fastcc void @copy_out([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [128 x i32]* %1, [128 x i32]* nonnull align 512 %buffer_out_copy)
+  call fastcc void @copy_out([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [129 x i32]* %1, [129 x i32]* nonnull align 512 %buffer_out_copy)
   ret void
 }
 
 ; Function Attrs: noinline
-define internal fastcc void @copy_in([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [128 x i32]* readonly, [128 x i32]* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [129 x i32]* readonly, [129 x i32]* noalias align 512) unnamed_addr #1 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a32struct.ap_uint([32 x %struct.ap_uint]* align 512 %1, [32 x %struct.ap_uint]* %0)
-  call fastcc void @onebyonecpy_hls.p0a128i32([128 x i32]* align 512 %3, [128 x i32]* %2)
+  call fastcc void @onebyonecpy_hls.p0a129i32([129 x i32]* align 512 %3, [129 x i32]* %2)
   ret void
 }
 
@@ -182,10 +182,10 @@ ret:                                              ; preds = %empty
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @onebyonecpy_hls.p0a128i32([128 x i32]* noalias align 512, [128 x i32]* noalias readonly) unnamed_addr #5 {
+define internal fastcc void @onebyonecpy_hls.p0a129i32([129 x i32]* noalias align 512, [129 x i32]* noalias readonly) unnamed_addr #5 {
 entry:
-  %2 = icmp eq [128 x i32]* %0, null
-  %3 = icmp eq [128 x i32]* %1, null
+  %2 = icmp eq [129 x i32]* %0, null
+  %3 = icmp eq [129 x i32]* %1, null
   %4 = or i1 %2, %3
   br i1 %4, label %ret, label %copy
 
@@ -194,13 +194,13 @@ copy:                                             ; preds = %entry
 
 for.loop:                                         ; preds = %for.loop, %copy
   %for.loop.idx3 = phi i64 [ 0, %copy ], [ %for.loop.idx.next, %for.loop ]
-  %dst.addr.gep1 = getelementptr [128 x i32], [128 x i32]* %0, i64 0, i64 %for.loop.idx3
+  %dst.addr.gep1 = getelementptr [129 x i32], [129 x i32]* %0, i64 0, i64 %for.loop.idx3
   %5 = bitcast i32* %dst.addr.gep1 to i8*
-  %src.addr.gep2 = getelementptr [128 x i32], [128 x i32]* %1, i64 0, i64 %for.loop.idx3
+  %src.addr.gep2 = getelementptr [129 x i32], [129 x i32]* %1, i64 0, i64 %for.loop.idx3
   %6 = bitcast i32* %src.addr.gep2 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %5, i8* align 1 %6, i64 4, i1 false)
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx3, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, 128
+  %exitcond = icmp ne i64 %for.loop.idx.next, 129
   br i1 %exitcond, label %for.loop, label %ret
 
 ret:                                              ; preds = %for.loop, %entry
@@ -208,10 +208,10 @@ ret:                                              ; preds = %for.loop, %entry
 }
 
 ; Function Attrs: noinline
-define internal fastcc void @copy_out([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [128 x i32]*, [128 x i32]* noalias readonly align 512) unnamed_addr #6 {
+define internal fastcc void @copy_out([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [129 x i32]*, [129 x i32]* noalias readonly align 512) unnamed_addr #6 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a32struct.ap_uint([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* align 512 %1)
-  call fastcc void @onebyonecpy_hls.p0a128i32([128 x i32]* %2, [128 x i32]* align 512 %3)
+  call fastcc void @onebyonecpy_hls.p0a129i32([129 x i32]* %2, [129 x i32]* align 512 %3)
   ret void
 }
 
@@ -220,12 +220,12 @@ declare void @apatb_mmWBramWriter_hw(%struct.ap_uint*, i32*)
 define void @mmWBramWriter_hw_stub_wrapper(%struct.ap_uint*, i32*) #7 {
 entry:
   %2 = bitcast %struct.ap_uint* %0 to [32 x %struct.ap_uint]*
-  %3 = bitcast i32* %1 to [128 x i32]*
-  call void @copy_out([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [128 x i32]* null, [128 x i32]* %3)
+  %3 = bitcast i32* %1 to [129 x i32]*
+  call void @copy_out([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [129 x i32]* null, [129 x i32]* %3)
   %4 = bitcast [32 x %struct.ap_uint]* %2 to %struct.ap_uint*
-  %5 = bitcast [128 x i32]* %3 to i32*
+  %5 = bitcast [129 x i32]* %3 to i32*
   call void @mmWBramWriter_hw_stub(%struct.ap_uint* %4, i32* %5)
-  call void @copy_in([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [128 x i32]* null, [128 x i32]* %3)
+  call void @copy_in([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [129 x i32]* null, [129 x i32]* %3)
   ret void
 }
 
