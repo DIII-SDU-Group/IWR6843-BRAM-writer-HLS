@@ -5825,16 +5825,22 @@ __attribute__((sdx_kernel("mmWBramWriter", 0))) void mmWBramWriter(ap_uint<128> 
 uint32_t loadBuffer(ap_uint<128> buffer_in[32], ap_uint<128> buffer[32]) {
 
  uint32_t n_points = 32;
+ bool last_point = false;
 
  load_loop: for (int i = 0; i < 32; i++) {
 
-  if (buffer_in[i] == 0 && n_points == 32) {
+  if (buffer_in[i] == 0 && !last_point) {
 
    n_points = i;
+   last_point = true;
 
   }
 
-  buffer[i] = buffer_in[i];
+  if (!last_point) {
+   buffer[i] = buffer_in[i];
+  } else {
+   buffer[i] = 0;
+  }
 
  }
 

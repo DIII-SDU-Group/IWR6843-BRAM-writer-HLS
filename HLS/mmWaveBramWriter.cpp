@@ -25,16 +25,22 @@ void mmWBramWriter(ap_uint<128> buffer_in[BUFFER_SIZE], uint32_t buffer_out[BUFF
 uint32_t loadBuffer(ap_uint<128> buffer_in[BUFFER_SIZE], ap_uint<128> buffer[BUFFER_SIZE]) {
 
 	uint32_t n_points = BUFFER_SIZE;
+	bool last_point = false;
 
 	load_loop: for (int i = 0; i < BUFFER_SIZE; i++) {
 
-		if (buffer_in[i] == 0 && n_points == BUFFER_SIZE) {
+		if (buffer_in[i] == 0 && !last_point) {
 
 			n_points = i;
+			last_point = true;
 
 		}
 
-		buffer[i] = buffer_in[i];
+		if (!last_point) {
+			buffer[i] = buffer_in[i];
+		} else {
+			buffer[i] = 0;
+		}
 
 	}
 
