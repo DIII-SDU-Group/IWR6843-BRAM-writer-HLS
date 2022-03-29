@@ -5857,11 +5857,11 @@ void writeBuffer(ap_uint<128> buffer[32], uint32_t buffer_out[32*4+1], int n_poi
 
  buffer_out[1+i*4] = (uint32_t)(buffer[i].range(127, 96));
 
-   buffer_out[1+i*4] = (uint32_t)(buffer[i].range(95, 64));
+   buffer_out[1+i*4+1] = (uint32_t)(buffer[i].range(95, 64));
 
-   buffer_out[1+i*4] = (uint32_t)(buffer[i].range(63, 32));
+   buffer_out[1+i*4+2] = (uint32_t)(buffer[i].range(63, 32));
 
-   buffer_out[1+i*4] = (uint32_t)(buffer[i].range(31, 0));
+   buffer_out[1+i*4+3] = (uint32_t)(buffer[i].range(31, 0));
 
 
   }

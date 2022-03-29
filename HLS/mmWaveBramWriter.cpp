@@ -57,11 +57,11 @@ void writeBuffer(ap_uint<128> buffer[BUFFER_SIZE], uint32_t buffer_out[BUFFER_OU
 
 			buffer_out[1+i*4] 	= (uint32_t)(buffer[i].range(127, 96));
 //			buffer_out[1+i*4] 	= (uint32_t)((buffer[i] >> 12*8) & shift_val_4);
-			buffer_out[1+i*4] 	= (uint32_t)(buffer[i].range(95, 64));
+			buffer_out[1+i*4+1] 	= (uint32_t)(buffer[i].range(95, 64));
 //			buffer_out[1+i*4+1] = (uint32_t)((buffer[i] >> 8*8) & shift_val_3);
-			buffer_out[1+i*4] 	= (uint32_t)(buffer[i].range(63, 32));
+			buffer_out[1+i*4+2] 	= (uint32_t)(buffer[i].range(63, 32));
 //			buffer_out[1+i*4+2] = (uint32_t)((buffer[i] >> 4*8) & shift_val_2);
-			buffer_out[1+i*4] 	= (uint32_t)(buffer[i].range(31, 0));
+			buffer_out[1+i*4+3] 	= (uint32_t)(buffer[i].range(31, 0));
 //			buffer_out[1+i*4+3] = (uint32_t)((buffer[i] & shift_val_1));
 
 		}

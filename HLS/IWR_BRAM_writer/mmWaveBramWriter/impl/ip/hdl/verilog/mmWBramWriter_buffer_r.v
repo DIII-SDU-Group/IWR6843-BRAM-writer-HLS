@@ -6,7 +6,7 @@
 module mmWBramWriter_buffer_r_rom (
 addr0, ce0, q0, clk);
 
-parameter DWIDTH = 29;
+parameter DWIDTH = 121;
 parameter AWIDTH = 5;
 parameter MEM_SIZE = 32;
 
@@ -43,7 +43,7 @@ module mmWBramWriter_buffer_r(
     ce0,
     q0);
 
-parameter DataWidth = 32'd29;
+parameter DataWidth = 32'd121;
 parameter AddressRange = 32'd32;
 parameter AddressWidth = 32'd5;
 input reset;

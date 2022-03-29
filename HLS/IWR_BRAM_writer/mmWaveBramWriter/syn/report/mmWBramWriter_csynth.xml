@@ -43,16 +43,16 @@
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<IterationLatency>2</IterationLatency>
+<IterationLatency>5</IterationLatency>
 </write_loop>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>0</BRAM_18K>
-<FF>187</FF>
-<LUT>362</LUT>
+<BRAM_18K>4</BRAM_18K>
+<FF>263</FF>
+<LUT>430</LUT>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
