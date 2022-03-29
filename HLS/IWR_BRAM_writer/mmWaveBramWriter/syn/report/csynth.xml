@@ -1,0 +1,1015 @@
+<profile>
+    <ReportVersion>
+        <Version>2020.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplus</ProductFamily>
+        <Part>xczu3eg-sbva484-1-i</Part>
+        <TopModelName>mmWBramWriter</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>none</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>4.424</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>164</Best-caseLatency>
+            <Average-caseLatency>164</Average-caseLatency>
+            <Worst-caseLatency>164</Worst-caseLatency>
+            <Best-caseRealTimeLatency>1.640 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>1.640 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>1.640 us</Worst-caseRealTimeLatency>
+            <Interval-min>165</Interval-min>
+            <Interval-max>165</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <load_loop>
+                <TripCount>32</TripCount>
+                <Latency>32</Latency>
+                <AbsoluteTimeLatency>320</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>2</PipelineDepth>
+            </load_loop>
+            <write_loop>
+                <TripCount>128</TripCount>
+                <Latency>128</Latency>
+                <AbsoluteTimeLatency>1280</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>2</PipelineDepth>
+            </write_loop>
+        </SummaryOfLoopLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>4</BRAM_18K>
+            <FF>75</FF>
+            <LUT>620</LUT>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>432</BRAM_18K>
+            <DSP>360</DSP>
+            <FF>141120</FF>
+            <LUT>70560</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>return void</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>unknown</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>mmWBramWriter</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>mmWBramWriter</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>mmWBramWriter</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>buffer_in_address0</name>
+            <Object>buffer_in</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>5</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>buffer_in_ce0</name>
+            <Object>buffer_in</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>buffer_in_q0</name>
+            <Object>buffer_in</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>128</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>buffer_out_address0</name>
+            <Object>buffer_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>7</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>buffer_out_ce0</name>
+            <Object>buffer_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>buffer_out_we0</name>
+            <Object>buffer_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>buffer_out_d0</name>
+            <Object>buffer_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule>
+            <ModuleName>mmWBramWriter</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>mmWBramWriter</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.424</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>164</Best-caseLatency>
+                    <Average-caseLatency>164</Average-caseLatency>
+                    <Worst-caseLatency>164</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.640 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.640 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.640 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>165</PipelineInitiationInterval>
+                    <PipelineType>none</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <load_loop>
+                        <Name>load_loop</Name>
+                        <TripCount>32</TripCount>
+                        <Latency>32</Latency>
+                        <AbsoluteTimeLatency>0.320 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                    </load_loop>
+                    <write_loop>
+                        <Name>write_loop</Name>
+                        <TripCount>128</TripCount>
+                        <Latency>128</Latency>
+                        <AbsoluteTimeLatency>1.280 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                    </write_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>4</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>75</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>620</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <InterfaceSummary>
+                <RtlPorts>
+                    <name>s_axi_control_AWVALID</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_AWREADY</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_AWADDR</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_WVALID</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_WREADY</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_WDATA</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_WSTRB</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_ARVALID</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_ARREADY</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_ARADDR</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_RVALID</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_RREADY</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_RDATA</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_RRESP</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>2</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_BVALID</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_BREADY</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_control_BRESP</name>
+                    <Object>control</Object>
+                    <Type>return void</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>2</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>unknown</CType>
+                    <HasCtrl>1</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_clk</name>
+                    <Object>mmWBramWriter</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_rst_n</name>
+                    <Object>mmWBramWriter</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>interrupt</name>
+                    <Object>mmWBramWriter</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>buffer_in_address0</name>
+                    <Object>buffer_in</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>5</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>buffer_in_ce0</name>
+                    <Object>buffer_in</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>buffer_in_q0</name>
+                    <Object>buffer_in</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>128</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>buffer_out_address0</name>
+                    <Object>buffer_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>7</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>buffer_out_ce0</name>
+                    <Object>buffer_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>buffer_out_we0</name>
+                    <Object>buffer_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>buffer_out_d0</name>
+                    <Object>buffer_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+            </InterfaceSummary>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <Args>
+        <Arg ArgName="buffer_in" index="0" direction="in" srcType="ap_uint&lt;128&gt;*" srcSize="128">
+            <hwRefs>
+                <hwRef type="port" interface="buffer_in_address0" name="buffer_in_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="buffer_in_ce0" name="buffer_in_ce0" usage="control" direction="in"/>
+                <hwRef type="port" interface="buffer_in_q0" name="buffer_in_q0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="buffer_out" index="1" direction="out" srcType="unsigned int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="buffer_out_address0" name="buffer_out_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="buffer_out_ce0" name="buffer_out_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="buffer_out_we0" name="buffer_out_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="buffer_out_d0" name="buffer_out_d0" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="buffer_in_address0" type="data" busTypeName="data" mode="master" dataWidth="5">
+            <portMaps>
+                <portMap portMapName="buffer_in_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>buffer_in_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="buffer_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="buffer_in_q0" type="data" busTypeName="data" mode="slave" dataWidth="128">
+            <portMaps>
+                <portMap portMapName="buffer_in_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>buffer_in_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="buffer_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="buffer_out_address0" type="data" busTypeName="data" mode="master" dataWidth="7">
+            <portMaps>
+                <portMap portMapName="buffer_out_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>buffer_out_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="buffer_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="buffer_out_d0" type="data" busTypeName="data" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="buffer_out_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>buffer_out_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="buffer_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="4" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" resetValue="0x0" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" resetValue="0" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" resetValue="0" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" resetValue="0" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" resetValue="0" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" resetValue="0" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" resetValue="0" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="24" name="RESERVED_2" access="R" resetValue="0" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" resetValue="0x0" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" resetValue="0" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" resetValue="0x0" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" resetValue="0" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" resetValue="0" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" resetValue="0x0" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" resetValue="0" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" resetValue="0" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"/>
+                        <field offset="2" width="30" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE">
+                <table>
+                    <keys size="3">Interface, Data Width, Address Width</keys>
+                    <column name="s_axi_control">32, 4</column>
+                </table>
+            </item>
+            <item name="AP_MEMORY">
+                <table>
+                    <keys size="2">Interface, Bitwidth</keys>
+                    <column name="buffer_in_address0">5</column>
+                    <column name="buffer_in_q0">128</column>
+                    <column name="buffer_out_address0">7</column>
+                    <column name="buffer_out_d0">32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="interrupt">interrupt, interrupt</column>
+                    <column name="ap_ctrl">ap_ctrl_hs</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="buffer_in">in, ap_uint&lt;128&gt;*</column>
+                    <column name="buffer_out">out, unsigned int*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Name, HW Type, HW Usage</keys>
+                    <column name="buffer_in">buffer_in_address0, port, offset</column>
+                    <column name="buffer_in">buffer_in_ce0, port, </column>
+                    <column name="buffer_in">buffer_in_q0, port, </column>
+                    <column name="buffer_out">buffer_out_address0, port, offset</column>
+                    <column name="buffer_out">buffer_out_ce0, port, </column>
+                    <column name="buffer_out">buffer_out_we0, port, </column>
+                    <column name="buffer_out">buffer_out_d0, port, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0"/>
+    </ReportBurst>
+</profile>
+
