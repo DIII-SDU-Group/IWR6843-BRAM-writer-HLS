@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'mmWBramWriter'
 ================================================================
 + General Information: 
-    * Date:           Tue Mar 29 17:31:53 2022
+    * Date:           Tue Mar 29 17:34:02 2022
     * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
     * Project:        IWR_BRAM_writer
     * Solution:       mmWaveBramWriter (Vivado IP Flow Target)
@@ -19,8 +19,8 @@
     |     Modules     | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |    |           |           |     |
     |     & Loops     | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
     +-----------------+------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
-    |+ mmWBramWriter  |     -|  -3.96|        -|        -|         -|        -|     -|        no|     -|   -|  187 (~0%)|  427 (~0%)|    -|
+    |+ mmWBramWriter  |     -|  -3.96|        -|        -|         -|        -|     -|        no|     -|   -|  218 (~0%)|  428 (~0%)|    -|
     | o load_loop     |     -|  -7.30|       32|  320.000|         2|        1|    32|       yes|     -|   -|          -|          -|    -|
-    | o write_loop    |     -|  -7.30|        -|        -|         2|        -|     -|        no|     -|   -|          -|          -|    -|
+    | o write_loop    |     -|  -7.30|        -|        -|         4|        -|     -|        no|     -|   -|          -|          -|    -|
     +-----------------+------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
 

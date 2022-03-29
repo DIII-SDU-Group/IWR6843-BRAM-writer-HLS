@@ -5810,7 +5810,7 @@ __attribute__((sdx_kernel("mmWBramWriter", 0))) void mmWBramWriter(ap_uint<128> 
 # 11 "mmWaveBramWriter.cpp"
 
 #pragma HLS INTERFACE ap_memory port=buffer_in
-#pragma HLS INTERFACE ap_memory port=buffer_out
+#pragma HLS INTERFACE ap_memory storage_type=ram_1p port=buffer_out
 #pragma HLS INTERFACE s_axilite port=return
 #pragma HLS TOP
 

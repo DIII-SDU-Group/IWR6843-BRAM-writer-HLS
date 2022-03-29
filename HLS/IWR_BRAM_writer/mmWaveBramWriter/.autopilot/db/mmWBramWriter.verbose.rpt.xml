@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mmWBramWriter'" level="0">
-<item name = "Date">Tue Mar 29 17:31:53 2022
+<item name = "Date">Tue Mar 29 17:34:02 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">IWR_BRAM_writer</item>
@@ -36,7 +36,7 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- load_loop">32, 32, 2, 1, 1, 32, yes</column>
-<column name="- write_loop">?, ?, 2, -, -, ?, no</column>
+<column name="- write_loop">?, ?, 4, -, -, ?, no</column>
 </table>
 </item>
 </section>
@@ -53,8 +53,8 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">0, -, 36, 40, -</column>
 <column name="Memory">0, -, 29, 15, -</column>
-<column name="Multiplexer">-, -, -, 143, -</column>
-<column name="Register">-, -, 122, -, -</column>
+<column name="Multiplexer">-, -, -, 144, -</column>
+<column name="Register">-, -, 153, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -81,48 +81,47 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln29_fu_180_p2">+, 0, 0, 13, 6, 1</column>
-<column name="add_ln55_fu_231_p2">+, 0, 0, 39, 32, 1</column>
-<column name="add_ln61_fu_301_p2">+, 0, 0, 15, 8, 3</column>
-<column name="and_ln31_fu_209_p2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln29_fu_186_p2">icmp, 0, 0, 10, 6, 7</column>
-<column name="icmp_ln31_fu_203_p2">icmp, 0, 0, 20, 32, 6</column>
-<column name="icmp_ln55_fu_242_p2">icmp, 0, 0, 20, 32, 32</column>
-<column name="icmp_ln870_fu_197_p2">icmp, 0, 0, 50, 128, 1</column>
-<column name="or_ln58_fu_260_p2">or, 0, 0, 8, 8, 1</column>
-<column name="or_ln59_fu_271_p2">or, 0, 0, 8, 8, 2</column>
-<column name="or_ln60_fu_282_p2">or, 0, 0, 8, 8, 2</column>
-<column name="n_points_fu_223_p3">select, 0, 0, 32, 1, 32</column>
+<column name="add_ln29_fu_183_p2">+, 0, 0, 13, 6, 1</column>
+<column name="add_ln55_fu_234_p2">+, 0, 0, 39, 32, 1</column>
+<column name="add_ln61_fu_302_p2">+, 0, 0, 15, 8, 3</column>
+<column name="and_ln31_fu_212_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln29_fu_189_p2">icmp, 0, 0, 10, 6, 7</column>
+<column name="icmp_ln31_fu_206_p2">icmp, 0, 0, 20, 32, 6</column>
+<column name="icmp_ln55_fu_245_p2">icmp, 0, 0, 20, 32, 32</column>
+<column name="icmp_ln870_fu_200_p2">icmp, 0, 0, 50, 128, 1</column>
+<column name="or_ln58_fu_263_p2">or, 0, 0, 8, 8, 1</column>
+<column name="or_ln59_fu_274_p2">or, 0, 0, 8, 8, 2</column>
+<column name="or_ln60_fu_284_p2">or, 0, 0, 8, 8, 2</column>
+<column name="n_points_fu_226_p3">select, 0, 0, 32, 1, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">31, 6, 1, 6</column>
+<column name="ap_NS_fsm">43, 8, 1, 8</column>
 <column name="ap_enable_reg_pp0_iter1">14, 3, 1, 3</column>
-<column name="ap_phi_mux_i_2_phi_fu_148_p4">9, 2, 6, 12</column>
-<column name="buffer_out_address0">20, 4, 8, 32</column>
-<column name="buffer_out_address1">14, 3, 8, 24</column>
-<column name="buffer_out_d0">14, 3, 32, 96</column>
-<column name="buffer_out_d1">14, 3, 32, 96</column>
-<column name="i_2_reg_144">9, 2, 6, 12</column>
-<column name="i_reg_169">9, 2, 32, 64</column>
-<column name="n_points_1_reg_156">9, 2, 32, 64</column>
+<column name="ap_phi_mux_i_2_phi_fu_151_p4">9, 2, 6, 12</column>
+<column name="buffer_out_address0">31, 6, 8, 48</column>
+<column name="buffer_out_d0">20, 4, 32, 128</column>
+<column name="i_2_reg_147">9, 2, 6, 12</column>
+<column name="i_reg_172">9, 2, 32, 64</column>
+<column name="n_points_1_reg_159">9, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln29_reg_311">6, 0, 6, 0</column>
-<column name="add_ln55_reg_330">32, 0, 32, 0</column>
-<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="add_ln29_reg_312">6, 0, 6, 0</column>
+<column name="add_ln55_reg_331">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="i_2_reg_144">6, 0, 6, 0</column>
-<column name="i_reg_169">32, 0, 32, 0</column>
-<column name="icmp_ln29_reg_316">1, 0, 1, 0</column>
-<column name="n_points_1_reg_156">32, 0, 32, 0</column>
-<column name="shl_ln_reg_338">6, 0, 8, 2</column>
+<column name="i_2_reg_147">6, 0, 6, 0</column>
+<column name="i_reg_172">32, 0, 32, 0</column>
+<column name="icmp_ln29_reg_317">1, 0, 1, 0</column>
+<column name="lhs_V_reg_351">29, 0, 29, 0</column>
+<column name="n_points_1_reg_159">32, 0, 32, 0</column>
+<column name="shl_ln_reg_339">6, 0, 8, 2</column>
 </table>
 </item>
 </section>
@@ -159,10 +158,6 @@
 <column name="buffer_out_ce0">out, 1, ap_memory, buffer_out, array</column>
 <column name="buffer_out_we0">out, 1, ap_memory, buffer_out, array</column>
 <column name="buffer_out_d0">out, 32, ap_memory, buffer_out, array</column>
-<column name="buffer_out_address1">out, 8, ap_memory, buffer_out, array</column>
-<column name="buffer_out_ce1">out, 1, ap_memory, buffer_out, array</column>
-<column name="buffer_out_we1">out, 1, ap_memory, buffer_out, array</column>
-<column name="buffer_out_d1">out, 32, ap_memory, buffer_out, array</column>
 </table>
 </item>
 </section>

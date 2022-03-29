@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Mar 29 17:32:13 2022
-# Process ID: 1962406
+# Start of session at: Tue Mar 29 17:34:36 2022
+# Process ID: 1964037
 # Current directory: /home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS/IWR_BRAM_writer/mmWaveBramWriter/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS/IWR_BRAM_writer/mmWaveBramWriter/impl/ip/vivado.log

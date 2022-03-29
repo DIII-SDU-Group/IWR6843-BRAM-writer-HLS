@@ -3,7 +3,6 @@
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="buffer_in_q0" xd:originalName="buffer_in_q0" xd:direction="in" xd:interfaceRef="buffer_in_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="128"/>
   <xd:arg xd:name="buffer_out_d0" xd:originalName="buffer_out_d0" xd:direction="out" xd:interfaceRef="buffer_out_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
-  <xd:arg xd:name="buffer_out_d1" xd:originalName="buffer_out_d1" xd:direction="out" xd:interfaceRef="buffer_out_d1" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="427" xd:FF="187" xd:BRAM="0" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="428" xd:FF="218" xd:BRAM="0" xd:DSP="0"/>
 </xd:acceleratorMap>

@@ -13,13 +13,13 @@ set C_modelName {mmWBramWriter}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ buffer_in int 128 regular {array 32 { 1 3 } 1 1 }  }
-	{ buffer_out int 32 regular {array 129 { 0 0 } 0 1 }  }
+	{ buffer_out int 32 regular {array 129 { 0 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "buffer_in", "interface" : "memory", "bitwidth" : 128, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "buffer_in","cData": "int128","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "buffer_out", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "buffer_out","cData": "int","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 31
+set portNum 27
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
@@ -30,10 +30,6 @@ set portList {
 	{ buffer_out_ce0 sc_out sc_logic 1 signal 1 } 
 	{ buffer_out_we0 sc_out sc_logic 1 signal 1 } 
 	{ buffer_out_d0 sc_out sc_lv 32 signal 1 } 
-	{ buffer_out_address1 sc_out sc_lv 8 signal 1 } 
-	{ buffer_out_ce1 sc_out sc_logic 1 signal 1 } 
-	{ buffer_out_we1 sc_out sc_logic 1 signal 1 } 
-	{ buffer_out_d1 sc_out sc_lv 32 signal 1 } 
 	{ s_axi_control_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_AWREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_AWADDR sc_in sc_lv 4 signal -1 } 
@@ -80,11 +76,7 @@ set NewPortList {[
  	{ "name": "buffer_out_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "buffer_out", "role": "address0" }} , 
  	{ "name": "buffer_out_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "ce0" }} , 
  	{ "name": "buffer_out_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "we0" }} , 
- 	{ "name": "buffer_out_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_out", "role": "d0" }} , 
- 	{ "name": "buffer_out_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "buffer_out", "role": "address1" }} , 
- 	{ "name": "buffer_out_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "ce1" }} , 
- 	{ "name": "buffer_out_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buffer_out", "role": "we1" }} , 
- 	{ "name": "buffer_out_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_out", "role": "d1" }}  ]}
+ 	{ "name": "buffer_out_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_out", "role": "d0" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
@@ -127,7 +119,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	buffer_in { ap_memory {  { buffer_in_address0 mem_address 1 5 }  { buffer_in_ce0 mem_ce 1 1 }  { buffer_in_q0 mem_dout 0 128 } } }
-	buffer_out { ap_memory {  { buffer_out_address0 mem_address 1 8 }  { buffer_out_ce0 mem_ce 1 1 }  { buffer_out_we0 mem_we 1 1 }  { buffer_out_d0 mem_din 1 32 }  { buffer_out_address1 MemPortADDR2 1 8 }  { buffer_out_ce1 MemPortCE2 1 1 }  { buffer_out_we1 MemPortWE2 1 1 }  { buffer_out_d1 MemPortDIN2 1 32 } } }
+	buffer_out { ap_memory {  { buffer_out_address0 mem_address 1 8 }  { buffer_out_ce0 mem_ce 1 1 }  { buffer_out_we0 mem_we 1 1 }  { buffer_out_d0 mem_din 1 32 } } }
 }
 
 set busDeadlockParameterList { 

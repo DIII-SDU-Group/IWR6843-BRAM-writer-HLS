@@ -77,34 +77,6 @@
           "name": "buffer_out_d0",
           "usage": "data",
           "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "buffer_out_address1",
-          "name": "buffer_out_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "buffer_out_ce1",
-          "name": "buffer_out_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "buffer_out_we1",
-          "name": "buffer_out_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "buffer_out_d1",
-          "name": "buffer_out_d1",
-          "usage": "data",
-          "direction": "out"
         }
       ]
     }
@@ -240,20 +212,6 @@
           "argName": "buffer_out"
         }]
     },
-    "buffer_out_address1": {
-      "type": "data",
-      "busTypeName": "data",
-      "mode": "master",
-      "dataWidth": "8",
-      "portMap": {"buffer_out_address1": "DATA"},
-      "ports": ["buffer_out_address1"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "buffer_out"
-        }]
-    },
     "buffer_out_d0": {
       "type": "data",
       "busTypeName": "data",
@@ -261,20 +219,6 @@
       "dataWidth": "32",
       "portMap": {"buffer_out_d0": "DATA"},
       "ports": ["buffer_out_d0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "buffer_out"
-        }]
-    },
-    "buffer_out_d1": {
-      "type": "data",
-      "busTypeName": "data",
-      "mode": "master",
-      "dataWidth": "32",
-      "portMap": {"buffer_out_d1": "DATA"},
-      "ports": ["buffer_out_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
@@ -590,22 +534,6 @@
     "buffer_out_d0": {
       "dir": "out",
       "width": "32"
-    },
-    "buffer_out_address1": {
-      "dir": "out",
-      "width": "8"
-    },
-    "buffer_out_ce1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "buffer_out_we1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "buffer_out_d1": {
-      "dir": "out",
-      "width": "32"
     }
   },
   "ModuleInfo": {
@@ -644,17 +572,17 @@
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
-            "PipelineDepth": "2"
+            "PipelineDepth": "4"
           }
         ],
         "Area": {
           "BRAM_18K": "0",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "0",
-          "FF": "187",
+          "FF": "218",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "427",
+          "LUT": "428",
           "AVAIL_LUT": "70560",
           "UTIL_LUT": "~0",
           "DSP": "0",
@@ -669,7 +597,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-29 17:31:53 CEST",
+    "Time": "2022-03-29 17:34:02 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

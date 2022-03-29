@@ -22,17 +22,7 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_address1</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
         <name>buffer_out_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>buffer_out_ce1</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
@@ -42,17 +32,7 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_d1</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
         <name>buffer_out_we0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>buffer_out_we1</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>

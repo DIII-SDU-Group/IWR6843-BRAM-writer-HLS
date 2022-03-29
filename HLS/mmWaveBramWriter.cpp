@@ -10,7 +10,7 @@ void writeBuffer(ap_uint<128> buffer[BUFFER_SIZE], uint32_t buffer_out[BUFFER_OU
 
 void mmWBramWriter(ap_uint<128> buffer_in[BUFFER_SIZE], uint32_t buffer_out[BUFFER_OUT_SIZE]) {
 #pragma HLS INTERFACE ap_memory port=buffer_in
-#pragma HLS INTERFACE ap_memory port=buffer_out
+#pragma HLS INTERFACE ap_memory storage_type=ram_1p port=buffer_out
 #pragma HLS INTERFACE s_axilite port=return
 #pragma HLS TOP
 
