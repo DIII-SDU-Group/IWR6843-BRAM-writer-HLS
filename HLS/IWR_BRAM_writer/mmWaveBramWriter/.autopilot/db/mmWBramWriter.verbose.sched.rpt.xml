@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mmWBramWriter'" level="0">
-<item name = "Date">Tue Mar 29 11:14:58 2022
+<item name = "Date">Tue Mar 29 16:34:29 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">IWR_BRAM_writer</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">164, 164, 1.640 us, 1.640 us, 165, 165, none</column>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,7 +36,7 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- load_loop">32, 32, 2, 1, 1, 32, yes</column>
-<column name="- write_loop">128, 128, 2, 1, 1, 128, yes</column>
+<column name="- write_loop">?, ?, 2, 1, 1, ?, yes</column>
 </table>
 </item>
 </section>

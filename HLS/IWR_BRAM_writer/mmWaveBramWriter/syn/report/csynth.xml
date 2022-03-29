@@ -19,14 +19,14 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>164</Best-caseLatency>
-            <Average-caseLatency>164</Average-caseLatency>
-            <Worst-caseLatency>164</Worst-caseLatency>
-            <Best-caseRealTimeLatency>1.640 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>1.640 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>1.640 us</Worst-caseRealTimeLatency>
-            <Interval-min>165</Interval-min>
-            <Interval-max>165</Interval-max>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
             <load_loop>
@@ -37,9 +37,9 @@
                 <PipelineDepth>2</PipelineDepth>
             </load_loop>
             <write_loop>
-                <TripCount>128</TripCount>
-                <Latency>128</Latency>
-                <AbsoluteTimeLatency>1280</AbsoluteTimeLatency>
+                <TripCount>undef</TripCount>
+                <Latency>undef</Latency>
+                <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
                 <PipelineII>1</PipelineII>
                 <PipelineDepth>2</PipelineDepth>
             </write_loop>
@@ -48,8 +48,8 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>4</BRAM_18K>
-            <FF>77</FF>
-            <LUT>648</LUT>
+            <FF>193</FF>
+            <LUT>803</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -416,13 +416,13 @@
                     <EstimatedClockPeriod>4.424</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>164</Best-caseLatency>
-                    <Average-caseLatency>164</Average-caseLatency>
-                    <Worst-caseLatency>164</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.640 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.640 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.640 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>165</PipelineInitiationInterval>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
                     <PipelineType>none</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -436,9 +436,9 @@
                     </load_loop>
                     <write_loop>
                         <Name>write_loop</Name>
-                        <TripCount>128</TripCount>
-                        <Latency>128</Latency>
-                        <AbsoluteTimeLatency>1.280 us</AbsoluteTimeLatency>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                     </write_loop>
@@ -449,12 +449,12 @@
                     <BRAM_18K>4</BRAM_18K>
                     <AVAIL_BRAM>432</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>77</FF>
+                    <FF>193</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>648</LUT>
+                    <LUT>803</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
                     <DSP>0</DSP>
                     <AVAIL_DSP>360</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>

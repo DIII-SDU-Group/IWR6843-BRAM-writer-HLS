@@ -102,7 +102,7 @@
     "Uncertainty": "2.7",
     "IsCombinational": "0",
     "II": "x",
-    "Latency": "164"
+    "Latency": "undef"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -546,10 +546,10 @@
       }},
     "Metrics": {"mmWBramWriter": {
         "Latency": {
-          "LatencyBest": "164",
-          "LatencyAvg": "164",
-          "LatencyWorst": "164",
-          "PipelineII": "165",
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -568,8 +568,8 @@
           },
           {
             "Name": "write_loop",
-            "TripCount": "128",
-            "Latency": "128",
+            "TripCount": "",
+            "Latency": "",
             "PipelineII": "1",
             "PipelineDepth": "2"
           }
@@ -578,12 +578,12 @@
           "BRAM_18K": "4",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "~0",
-          "FF": "77",
+          "FF": "193",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "648",
+          "LUT": "803",
           "AVAIL_LUT": "70560",
-          "UTIL_LUT": "~0",
+          "UTIL_LUT": "1",
           "DSP": "0",
           "AVAIL_DSP": "360",
           "UTIL_DSP": "0",
@@ -596,7 +596,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-29 11:14:58 CEST",
+    "Time": "2022-03-29 16:34:30 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }
