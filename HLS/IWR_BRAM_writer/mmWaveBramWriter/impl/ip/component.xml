@@ -582,7 +582,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3327eefd</spirit:value>
+            <spirit:value>786ae04f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -598,7 +598,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2e5047e1</spirit:value>
+            <spirit:value>3117bb29</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -614,7 +614,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b7b6652d</spirit:value>
+            <spirit:value>f2ccc0b1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -630,7 +630,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>93f479ea</spirit:value>
+            <spirit:value>5f20458e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1116,12 +1116,8 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/mmWBramWriter_buffer_r.v</spirit:name>
+        <spirit:name>hdl/verilog/mmWBramWriter_buffer_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/mmWBramWriter_buffer_r_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/mmWBramWriter_control_s_axi.v</spirit:name>
@@ -1135,13 +1131,9 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/mmWBramWriter_buffer_r.v</spirit:name>
+        <spirit:name>hdl/verilog/mmWBramWriter_buffer_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/mmWBramWriter_buffer_r_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/mmWBramWriter_control_s_axi.v</spirit:name>
@@ -1162,7 +1154,7 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/mmWBramWriter_buffer_r.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/mmWBramWriter_buffer_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1172,13 +1164,13 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/mmWBramWriter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_2d6ebd06</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_6871c68a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/mmWBramWriter_buffer_r.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/mmWBramWriter_buffer_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1297,8 +1289,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Mmwbramwriter</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112438669</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-03-29T16:09:32Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112438686</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-03-29T16:26:18Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -1308,7 +1300,7 @@
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c0c01186"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f2df1fcd"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="76ec9983"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2d8e9cb8"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b2b7344c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="23754c13"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="70619833"/>

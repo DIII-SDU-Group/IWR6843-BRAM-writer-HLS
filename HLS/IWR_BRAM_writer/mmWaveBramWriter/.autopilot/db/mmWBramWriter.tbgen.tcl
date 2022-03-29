@@ -94,17 +94,15 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "buffer_in", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buffer_out", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "buffer_r", "Type" : "Memory", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buffer_r_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"}]}
+			{"Name" : "buffer_out", "Type" : "Memory", "Direction" : "O"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buffer_V_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	mmWBramWriter {
 		buffer_in {Type I LastRead 1 FirstWrite -1}
-		buffer_out {Type O LastRead -1 FirstWrite 2}
-		buffer_r {Type I LastRead -1 FirstWrite -1}}}
+		buffer_out {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 

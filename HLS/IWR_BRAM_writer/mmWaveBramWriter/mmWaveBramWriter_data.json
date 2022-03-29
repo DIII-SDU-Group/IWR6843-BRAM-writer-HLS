@@ -120,13 +120,12 @@
   "Files": {
     "CSource": ["..\/..\/mmWaveBramWriter.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/mmWBramWriter_buffer_r.vhd",
+      "impl\/vhdl\/mmWBramWriter_buffer_V.vhd",
       "impl\/vhdl\/mmWBramWriter_control_s_axi.vhd",
       "impl\/vhdl\/mmWBramWriter.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/mmWBramWriter_buffer_r.v",
-      "impl\/verilog\/mmWBramWriter_buffer_r_rom.dat",
+      "impl\/verilog\/mmWBramWriter_buffer_V.v",
       "impl\/verilog\/mmWBramWriter_control_s_axi.v",
       "impl\/verilog\/mmWBramWriter.v"
     ],
@@ -579,10 +578,10 @@
           "BRAM_18K": "4",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "~0",
-          "FF": "263",
+          "FF": "269",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "430",
+          "LUT": "444",
           "AVAIL_LUT": "70560",
           "UTIL_LUT": "~0",
           "DSP": "0",
@@ -597,7 +596,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-29 18:08:41 CEST",
+    "Time": "2022-03-29 18:26:01 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }
