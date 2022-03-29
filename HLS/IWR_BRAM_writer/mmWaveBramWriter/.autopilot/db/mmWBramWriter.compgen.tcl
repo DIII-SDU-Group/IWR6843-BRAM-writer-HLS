@@ -3,7 +3,7 @@
 # Memory (RAM/ROM)  definition:
 set ID 1
 set hasByteEnable 0
-set MemName mmWBramWriter_buffer
+set MemName mmWBramWriter_buffer_V
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 128
@@ -153,7 +153,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename buffer_out \
     op interface \
-    ports { buffer_out_address0 { O 8 vector } buffer_out_ce0 { O 1 bit } buffer_out_we0 { O 1 bit } buffer_out_d0 { O 32 vector } } \
+    ports { buffer_out_address0 { O 6 vector } buffer_out_ce0 { O 1 bit } buffer_out_we0 { O 1 bit } buffer_out_d0 { O 128 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'buffer_out'"

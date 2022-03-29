@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'mmWBramWriter'
 ================================================================
-* Date:           Tue Mar 29 16:34:29 2022
+* Date:           Tue Mar 29 16:51:23 2022
 
 * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
 * Project:        IWR_BRAM_writer
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  4.424 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  3.338 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -96,69 +96,63 @@ State 1 <SV = 0> <Delay = 0.48>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_3"   --->   Operation 8 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %buffer_in, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %buffer_in"   --->   Operation 10 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %buffer_out, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %buffer_out"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %buffer_out, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %buffer_out"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_2, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%buffer = alloca i64 1"   --->   Operation 14 'alloca' 'buffer' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
-ST_1 : Operation 15 [1/1] (0.48ns)   --->   "%br_ln29 = br void" [mmWaveBramWriter.cpp:29]   --->   Operation 15 'br' 'br_ln29' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%buffer_V = alloca i64 1" [mmWaveBramWriter.cpp:19]   --->   Operation 14 'alloca' 'buffer_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
+ST_1 : Operation 15 [1/1] (0.48ns)   --->   "%br_ln31 = br void" [mmWaveBramWriter.cpp:31]   --->   Operation 15 'br' 'br_ln31' <Predicate = true> <Delay = 0.48>
 
 State 2 <SV = 1> <Delay = 1.35>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%i_2 = phi i6 %add_ln29, void %.split2, i6 0, void" [mmWaveBramWriter.cpp:29]   --->   Operation 16 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%i_2 = phi i6 %add_ln31, void %.split2, i6 0, void" [mmWaveBramWriter.cpp:31]   --->   Operation 16 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%n_points = phi i32 %n_points_3, void %.split2, i32 32, void"   --->   Operation 17 'phi' 'n_points' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 18 [1/1] (0.88ns)   --->   "%add_ln29 = add i6 %i_2, i6 1" [mmWaveBramWriter.cpp:29]   --->   Operation 18 'add' 'add_ln29' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.88ns)   --->   "%add_ln31 = add i6 %i_2, i6 1" [mmWaveBramWriter.cpp:31]   --->   Operation 18 'add' 'add_ln31' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 19 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 20 [1/1] (0.87ns)   --->   "%icmp_ln29 = icmp_eq  i6 %i_2, i6 32" [mmWaveBramWriter.cpp:29]   --->   Operation 20 'icmp' 'icmp_ln29' <Predicate = true> <Delay = 0.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.87ns)   --->   "%icmp_ln31 = icmp_eq  i6 %i_2, i6 32" [mmWaveBramWriter.cpp:31]   --->   Operation 20 'icmp' 'icmp_ln31' <Predicate = true> <Delay = 0.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32"   --->   Operation 21 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln29 = br i1 %icmp_ln29, void %.split2, void %_Z10loadBufferP7ap_uintILi128EES1_.exit" [mmWaveBramWriter.cpp:29]   --->   Operation 22 'br' 'br_ln29' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%i_2_cast = zext i6 %i_2" [mmWaveBramWriter.cpp:29]   --->   Operation 23 'zext' 'i_2_cast' <Predicate = (!icmp_ln29)> <Delay = 0.00>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%buffer_in_addr = getelementptr i128 %buffer_in, i64 0, i64 %i_2_cast"   --->   Operation 24 'getelementptr' 'buffer_in_addr' <Predicate = (!icmp_ln29)> <Delay = 0.00>
-ST_2 : Operation 25 [2/2] (1.35ns)   --->   "%buffer_in_load = load i5 %buffer_in_addr"   --->   Operation 25 'load' 'buffer_in_load' <Predicate = (!icmp_ln29)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln31 = br i1 %icmp_ln31, void %.split2, void %_Z10loadBufferP7ap_uintILi128EES1_.exit" [mmWaveBramWriter.cpp:31]   --->   Operation 22 'br' 'br_ln31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%i_2_cast = zext i6 %i_2" [mmWaveBramWriter.cpp:31]   --->   Operation 23 'zext' 'i_2_cast' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%buffer_in_addr = getelementptr i128 %buffer_in, i64 0, i64 %i_2_cast"   --->   Operation 24 'getelementptr' 'buffer_in_addr' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 25 [2/2] (1.35ns)   --->   "%buffer_in_load = load i5 %buffer_in_addr"   --->   Operation 25 'load' 'buffer_in_load' <Predicate = (!icmp_ln31)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
 
 State 3 <SV = 2> <Delay = 3.33>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln27 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [mmWaveBramWriter.cpp:27]   --->   Operation 26 'specloopname' 'specloopname_ln27' <Predicate = (!icmp_ln29)> <Delay = 0.00>
-ST_3 : Operation 27 [1/2] (1.35ns)   --->   "%buffer_in_load = load i5 %buffer_in_addr"   --->   Operation 27 'load' 'buffer_in_load' <Predicate = (!icmp_ln29)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
-ST_3 : Operation 28 [1/1] (1.46ns)   --->   "%icmp_ln870 = icmp_eq  i128 %buffer_in_load, i128 0"   --->   Operation 28 'icmp' 'icmp_ln870' <Predicate = (!icmp_ln29)> <Delay = 1.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 29 [1/1] (1.11ns)   --->   "%icmp_ln31 = icmp_eq  i32 %n_points, i32 32" [mmWaveBramWriter.cpp:31]   --->   Operation 29 'icmp' 'icmp_ln31' <Predicate = (!icmp_ln29)> <Delay = 1.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node n_points_3)   --->   "%and_ln31 = and i1 %icmp_ln870, i1 %icmp_ln31" [mmWaveBramWriter.cpp:31]   --->   Operation 30 'and' 'and_ln31' <Predicate = (!icmp_ln29)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node n_points_3)   --->   "%trunc_ln31 = trunc i6 %i_2" [mmWaveBramWriter.cpp:31]   --->   Operation 31 'trunc' 'trunc_ln31' <Predicate = (!icmp_ln29)> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node n_points_3)   --->   "%zext_ln31 = zext i5 %trunc_ln31" [mmWaveBramWriter.cpp:31]   --->   Operation 32 'zext' 'zext_ln31' <Predicate = (!icmp_ln29)> <Delay = 0.00>
-ST_3 : Operation 33 [1/1] (0.52ns) (out node of the LUT)   --->   "%n_points_3 = select i1 %and_ln31, i32 %zext_ln31, i32 %n_points" [mmWaveBramWriter.cpp:31]   --->   Operation 33 'select' 'n_points_3' <Predicate = (!icmp_ln29)> <Delay = 0.52> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%buffer_addr = getelementptr i128 %buffer, i64 0, i64 %i_2_cast" [mmWaveBramWriter.cpp:37]   --->   Operation 34 'getelementptr' 'buffer_addr' <Predicate = (!icmp_ln29)> <Delay = 0.00>
-ST_3 : Operation 35 [1/1] (1.35ns)   --->   "%store_ln37 = store i128 %buffer_in_load, i5 %buffer_addr" [mmWaveBramWriter.cpp:37]   --->   Operation 35 'store' 'store_ln37' <Predicate = (!icmp_ln29)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 36 'br' 'br_ln0' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln29 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [mmWaveBramWriter.cpp:29]   --->   Operation 26 'specloopname' 'specloopname_ln29' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_3 : Operation 27 [1/2] (1.35ns)   --->   "%buffer_in_load = load i5 %buffer_in_addr"   --->   Operation 27 'load' 'buffer_in_load' <Predicate = (!icmp_ln31)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
+ST_3 : Operation 28 [1/1] (1.46ns)   --->   "%icmp_ln870 = icmp_eq  i128 %buffer_in_load, i128 0"   --->   Operation 28 'icmp' 'icmp_ln870' <Predicate = (!icmp_ln31)> <Delay = 1.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (1.11ns)   --->   "%icmp_ln33 = icmp_eq  i32 %n_points, i32 32" [mmWaveBramWriter.cpp:33]   --->   Operation 29 'icmp' 'icmp_ln33' <Predicate = (!icmp_ln31)> <Delay = 1.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node n_points_3)   --->   "%and_ln33 = and i1 %icmp_ln870, i1 %icmp_ln33" [mmWaveBramWriter.cpp:33]   --->   Operation 30 'and' 'and_ln33' <Predicate = (!icmp_ln31)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node n_points_3)   --->   "%trunc_ln33 = trunc i6 %i_2" [mmWaveBramWriter.cpp:33]   --->   Operation 31 'trunc' 'trunc_ln33' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node n_points_3)   --->   "%zext_ln33 = zext i5 %trunc_ln33" [mmWaveBramWriter.cpp:33]   --->   Operation 32 'zext' 'zext_ln33' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.52ns) (out node of the LUT)   --->   "%n_points_3 = select i1 %and_ln33, i32 %zext_ln33, i32 %n_points" [mmWaveBramWriter.cpp:33]   --->   Operation 33 'select' 'n_points_3' <Predicate = (!icmp_ln31)> <Delay = 0.52> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%buffer_V_addr = getelementptr i128 %buffer_V, i64 0, i64 %i_2_cast" [mmWaveBramWriter.cpp:39]   --->   Operation 34 'getelementptr' 'buffer_V_addr' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (1.35ns)   --->   "%store_ln39 = store i128 %buffer_in_load, i5 %buffer_V_addr" [mmWaveBramWriter.cpp:39]   --->   Operation 35 'store' 'store_ln39' <Predicate = (!icmp_ln31)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 36 'br' 'br_ln0' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 
 State 4 <SV = 2> <Delay = 1.35>
-ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%buffer_out_addr = getelementptr i32 %buffer_out, i64 0, i64 0" [mmWaveBramWriter.cpp:46]   --->   Operation 37 'getelementptr' 'buffer_out_addr' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 38 [1/1] (1.35ns)   --->   "%store_ln46 = store i32 %n_points, i8 %buffer_out_addr" [mmWaveBramWriter.cpp:46]   --->   Operation 38 'store' 'store_ln46' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 129> <RAM>
-ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%empty_10 = shl i32 %n_points, i32 2" [mmWaveBramWriter.cpp:31]   --->   Operation 39 'shl' 'empty_10' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 40 [1/1] (0.48ns)   --->   "%br_ln48 = br void" [mmWaveBramWriter.cpp:48]   --->   Operation 40 'br' 'br_ln48' <Predicate = true> <Delay = 0.48>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%sext_ln301 = sext i32 %n_points"   --->   Operation 37 'sext' 'sext_ln301' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%buffer_out_addr = getelementptr i128 %buffer_out, i64 0, i64 0" [mmWaveBramWriter.cpp:49]   --->   Operation 38 'getelementptr' 'buffer_out_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (1.35ns)   --->   "%store_ln49 = store i128 %sext_ln301, i6 %buffer_out_addr" [mmWaveBramWriter.cpp:49]   --->   Operation 39 'store' 'store_ln49' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 33> <RAM>
+ST_4 : Operation 40 [1/1] (0.48ns)   --->   "%br_ln51 = br void" [mmWaveBramWriter.cpp:51]   --->   Operation 40 'br' 'br_ln51' <Predicate = true> <Delay = 0.48>
 
 State 5 <SV = 3> <Delay = 1.35>
-ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%i = phi i32 %add_ln50, void %.split, i32 0, void %_Z10loadBufferP7ap_uintILi128EES1_.exit" [mmWaveBramWriter.cpp:50]   --->   Operation 41 'phi' 'i' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 42 [1/1] (1.20ns)   --->   "%add_ln50 = add i32 %i, i32 1" [mmWaveBramWriter.cpp:50]   --->   Operation 42 'add' 'add_ln50' <Predicate = true> <Delay = 1.20> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%i = phi i32 %add_ln53, void %.split, i32 0, void %_Z10loadBufferP7ap_uintILi128EES1_.exit" [mmWaveBramWriter.cpp:53]   --->   Operation 41 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] (1.20ns)   --->   "%add_ln53 = add i32 %i, i32 1" [mmWaveBramWriter.cpp:53]   --->   Operation 42 'add' 'add_ln53' <Predicate = true> <Delay = 1.20> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 43 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 44 [1/1] (1.11ns)   --->   "%icmp_ln48 = icmp_eq  i32 %i, i32 %empty_10" [mmWaveBramWriter.cpp:48]   --->   Operation 44 'icmp' 'icmp_ln48' <Predicate = true> <Delay = 1.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln48 = br i1 %icmp_ln48, void %.split, void %_Z11writeBufferP7ap_uintILi128EEPjj.exit.loopexit" [mmWaveBramWriter.cpp:48]   --->   Operation 45 'br' 'br_ln48' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%lshr_ln50_1 = partselect i5 @_ssdm_op_PartSelect.i5.i32.i32.i32, i32 %i, i32 2, i32 6" [mmWaveBramWriter.cpp:50]   --->   Operation 46 'partselect' 'lshr_ln50_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln50 = zext i5 %lshr_ln50_1" [mmWaveBramWriter.cpp:50]   --->   Operation 47 'zext' 'zext_ln50' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%buffer_addr_1 = getelementptr i128 %buffer, i64 0, i64 %zext_ln50" [mmWaveBramWriter.cpp:50]   --->   Operation 48 'getelementptr' 'buffer_addr_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_5 : Operation 49 [2/2] (1.35ns)   --->   "%buffer_load = load i5 %buffer_addr_1" [mmWaveBramWriter.cpp:50]   --->   Operation 49 'load' 'buffer_load' <Predicate = (!icmp_ln48)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
-ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln50 = trunc i32 %i" [mmWaveBramWriter.cpp:50]   --->   Operation 50 'trunc' 'trunc_ln50' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (1.11ns)   --->   "%icmp_ln51 = icmp_eq  i32 %i, i32 %n_points" [mmWaveBramWriter.cpp:51]   --->   Operation 44 'icmp' 'icmp_ln51' <Predicate = true> <Delay = 1.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51, void %.split, void %_Z11writeBufferP7ap_uintILi128EES1_i.exit.loopexit" [mmWaveBramWriter.cpp:51]   --->   Operation 45 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%i_cast = zext i32 %i" [mmWaveBramWriter.cpp:53]   --->   Operation 46 'zext' 'i_cast' <Predicate = (!icmp_ln51)> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%buffer_V_addr_1 = getelementptr i128 %buffer_V, i64 0, i64 %i_cast" [mmWaveBramWriter.cpp:53]   --->   Operation 47 'getelementptr' 'buffer_V_addr_1' <Predicate = (!icmp_ln51)> <Delay = 0.00>
+ST_5 : Operation 48 [2/2] (1.35ns)   --->   "%buffer_V_load = load i5 %buffer_V_addr_1" [mmWaveBramWriter.cpp:53]   --->   Operation 48 'load' 'buffer_V_load' <Predicate = (!icmp_ln51)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
 
-State 6 <SV = 4> <Delay = 4.42>
-ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%specloopname_ln48 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [mmWaveBramWriter.cpp:48]   --->   Operation 51 'specloopname' 'specloopname_ln48' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_6 : Operation 52 [1/2] (1.35ns)   --->   "%buffer_load = load i5 %buffer_addr_1" [mmWaveBramWriter.cpp:50]   --->   Operation 52 'load' 'buffer_load' <Predicate = (!icmp_ln48)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
-ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%shl_ln50_1 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i2.i5, i2 %trunc_ln50, i5 0" [mmWaveBramWriter.cpp:50]   --->   Operation 53 'bitconcatenate' 'shl_ln50_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln50_1 = zext i7 %shl_ln50_1" [mmWaveBramWriter.cpp:50]   --->   Operation 54 'zext' 'zext_ln50_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_6 : Operation 55 [1/1] (1.72ns)   --->   "%lshr_ln50 = lshr i128 %buffer_load, i128 %zext_ln50_1" [mmWaveBramWriter.cpp:50]   --->   Operation 55 'lshr' 'lshr_ln50' <Predicate = (!icmp_ln48)> <Delay = 1.72> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.72> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln50_1 = trunc i128 %lshr_ln50" [mmWaveBramWriter.cpp:50]   --->   Operation 56 'trunc' 'trunc_ln50_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln50_2 = zext i32 %add_ln50" [mmWaveBramWriter.cpp:50]   --->   Operation 57 'zext' 'zext_ln50_2' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%buffer_out_addr_1 = getelementptr i32 %buffer_out, i64 0, i64 %zext_ln50_2" [mmWaveBramWriter.cpp:50]   --->   Operation 58 'getelementptr' 'buffer_out_addr_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
-ST_6 : Operation 59 [1/1] (1.35ns)   --->   "%store_ln50 = store i32 %trunc_ln50_1, i8 %buffer_out_addr_1" [mmWaveBramWriter.cpp:50]   --->   Operation 59 'store' 'store_ln50' <Predicate = (!icmp_ln48)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 129> <RAM>
-ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 60 'br' 'br_ln0' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+State 6 <SV = 4> <Delay = 2.70>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%specloopname_ln51 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [mmWaveBramWriter.cpp:51]   --->   Operation 49 'specloopname' 'specloopname_ln51' <Predicate = (!icmp_ln51)> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln53 = zext i32 %add_ln53" [mmWaveBramWriter.cpp:53]   --->   Operation 50 'zext' 'zext_ln53' <Predicate = (!icmp_ln51)> <Delay = 0.00>
+ST_6 : Operation 51 [1/2] (1.35ns)   --->   "%buffer_V_load = load i5 %buffer_V_addr_1" [mmWaveBramWriter.cpp:53]   --->   Operation 51 'load' 'buffer_V_load' <Predicate = (!icmp_ln51)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 32> <RAM>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%buffer_out_addr_1 = getelementptr i128 %buffer_out, i64 0, i64 %zext_ln53" [mmWaveBramWriter.cpp:53]   --->   Operation 52 'getelementptr' 'buffer_out_addr_1' <Predicate = (!icmp_ln51)> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (1.35ns)   --->   "%store_ln53 = store i128 %buffer_V_load, i6 %buffer_out_addr_1" [mmWaveBramWriter.cpp:53]   --->   Operation 53 'store' 'store_ln53' <Predicate = (!icmp_ln51)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 33> <RAM>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 54 'br' 'br_ln0' <Predicate = (!icmp_ln51)> <Delay = 0.00>
 
 State 7 <SV = 4> <Delay = 0.00>
-ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%ret_ln23 = ret" [mmWaveBramWriter.cpp:23]   --->   Operation 61 'ret' 'ret_ln23' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%ret_ln25 = ret" [mmWaveBramWriter.cpp:25]   --->   Operation 55 'ret' 'ret_ln25' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -168,11 +162,11 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 
  <State 1>: 0.489ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation ('i', mmWaveBramWriter.cpp:29) with incoming values : ('add_ln29', mmWaveBramWriter.cpp:29) [12]  (0.489 ns)
+	multiplexor before 'phi' operation ('i', mmWaveBramWriter.cpp:31) with incoming values : ('add_ln31', mmWaveBramWriter.cpp:31) [12]  (0.489 ns)
 
  <State 2>: 1.35ns
 The critical path consists of the following:
-	'phi' operation ('i', mmWaveBramWriter.cpp:29) with incoming values : ('add_ln29', mmWaveBramWriter.cpp:29) [12]  (0 ns)
+	'phi' operation ('i', mmWaveBramWriter.cpp:31) with incoming values : ('add_ln31', mmWaveBramWriter.cpp:31) [12]  (0 ns)
 	'getelementptr' operation ('buffer_in_addr') [22]  (0 ns)
 	'load' operation ('buffer_in_load') on array 'buffer_in' [23]  (1.35 ns)
 
@@ -180,25 +174,23 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'load' operation ('buffer_in_load') on array 'buffer_in' [23]  (1.35 ns)
 	'icmp' operation ('icmp_ln870') [24]  (1.46 ns)
-	'and' operation ('and_ln31', mmWaveBramWriter.cpp:31) [26]  (0 ns)
-	'select' operation ('n_points', mmWaveBramWriter.cpp:31) [29]  (0.525 ns)
+	'and' operation ('and_ln33', mmWaveBramWriter.cpp:33) [26]  (0 ns)
+	'select' operation ('n_points', mmWaveBramWriter.cpp:33) [29]  (0.525 ns)
 
  <State 4>: 1.35ns
 The critical path consists of the following:
-	'getelementptr' operation ('buffer_out_addr', mmWaveBramWriter.cpp:46) [34]  (0 ns)
-	'store' operation ('store_ln46', mmWaveBramWriter.cpp:46) of variable 'n_points' on array 'buffer_out' [35]  (1.35 ns)
+	'store' operation ('store_ln49', mmWaveBramWriter.cpp:49) of variable 'sext_ln301' on array 'buffer_out' [36]  (1.35 ns)
 
  <State 5>: 1.35ns
 The critical path consists of the following:
-	'phi' operation ('i', mmWaveBramWriter.cpp:50) with incoming values : ('add_ln50', mmWaveBramWriter.cpp:50) [39]  (0 ns)
-	'getelementptr' operation ('buffer_addr_1', mmWaveBramWriter.cpp:50) [48]  (0 ns)
-	'load' operation ('buffer_load', mmWaveBramWriter.cpp:50) on array 'buffer' [49]  (1.35 ns)
+	'phi' operation ('i', mmWaveBramWriter.cpp:53) with incoming values : ('add_ln53', mmWaveBramWriter.cpp:53) [39]  (0 ns)
+	'getelementptr' operation ('buffer_V_addr_1', mmWaveBramWriter.cpp:53) [47]  (0 ns)
+	'load' operation ('buffer_V_load', mmWaveBramWriter.cpp:53) on array 'buffer.V', mmWaveBramWriter.cpp:19 [49]  (1.35 ns)
 
- <State 6>: 4.42ns
+ <State 6>: 2.7ns
 The critical path consists of the following:
-	'load' operation ('buffer_load', mmWaveBramWriter.cpp:50) on array 'buffer' [49]  (1.35 ns)
-	'lshr' operation ('lshr_ln50', mmWaveBramWriter.cpp:50) [53]  (1.72 ns)
-	'store' operation ('store_ln50', mmWaveBramWriter.cpp:50) of variable 'trunc_ln50_1', mmWaveBramWriter.cpp:50 on array 'buffer_out' [57]  (1.35 ns)
+	'load' operation ('buffer_V_load', mmWaveBramWriter.cpp:53) on array 'buffer.V', mmWaveBramWriter.cpp:19 [49]  (1.35 ns)
+	'store' operation ('store_ln53', mmWaveBramWriter.cpp:53) of variable 'buffer_V_load', mmWaveBramWriter.cpp:53 on array 'buffer_out' [51]  (1.35 ns)
 
  <State 7>: 0ns
 The critical path consists of the following:

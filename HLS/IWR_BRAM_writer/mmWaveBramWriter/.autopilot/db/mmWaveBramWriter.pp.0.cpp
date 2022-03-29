@@ -5803,11 +5803,13 @@ typedef __uintmax_t uintmax_t;
 
 uint32_t loadBuffer(ap_uint<128> buffer_in[32], ap_uint<128> buffer[32]);
 
-void writeBuffer(ap_uint<128> buffer[32], uint32_t buffer_out[32*4+1], uint32_t n_points);
 
-__attribute__((sdx_kernel("mmWBramWriter", 0))) void mmWBramWriter(ap_uint<128> buffer_in[32], uint32_t buffer_out[32*4+1]) {_ssdm_SpecArrayDimSize(buffer_in, 32);_ssdm_SpecArrayDimSize(buffer_out, 129);
+void writeBuffer(ap_uint<128> buffer[32], ap_uint<128> buffer_out[32 +1], int n_points);
+
+__attribute__((sdx_kernel("mmWBramWriter", 0))) void mmWBramWriter(ap_uint<128> buffer_in[32], ap_uint<128> buffer_out[32 +1]) {_ssdm_SpecArrayDimSize(buffer_in, 32);_ssdm_SpecArrayDimSize(buffer_out, 33);
 #pragma HLS TOP name=mmWBramWriter
-# 11 "mmWaveBramWriter.cpp"
+# 12 "mmWaveBramWriter.cpp"
+
 
 #pragma HLS INTERFACE ap_memory port=buffer_in
 #pragma HLS INTERFACE ap_memory port=buffer_out
@@ -5816,7 +5818,7 @@ __attribute__((sdx_kernel("mmWBramWriter", 0))) void mmWBramWriter(ap_uint<128> 
 
  ap_uint<128> buffer[32];
 
- uint32_t n_points = loadBuffer(buffer_in, buffer);
+ int n_points = loadBuffer(buffer_in, buffer);
 
  writeBuffer(buffer, buffer_out, n_points);
 
@@ -5841,13 +5843,14 @@ uint32_t loadBuffer(ap_uint<128> buffer_in[32], ap_uint<128> buffer[32]) {
  return n_points;
 }
 
-void writeBuffer(ap_uint<128> buffer[32], uint32_t buffer_out[32*4+1], uint32_t n_points) {
+void writeBuffer(ap_uint<128> buffer[32], ap_uint<128> buffer_out[32 +1], int n_points) {
 
-  buffer_out[0] = (uint32_t)n_points;
 
-  write_loop: for (int i = 0; i < n_points*4; i++) {
+  buffer_out[0] = (ap_uint<128>)n_points;
 
-   buffer_out[i+1] = ((uint32_t *)buffer)[i];
+  write_loop: for (int i = 0; i < n_points; i++) {
+
+   buffer_out[i+1] = buffer[i];
 
   }
 

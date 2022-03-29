@@ -3,7 +3,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 `timescale 1 ns / 1 ps
-module mmWBramWriter_buffer_ram (addr0, ce0, d0, we0, q0,  clk);
+module mmWBramWriter_buffer_V_ram (addr0, ce0, d0, we0, q0,  clk);
 
 parameter DWIDTH = 128;
 parameter AWIDTH = 5;
@@ -34,7 +34,7 @@ end
 endmodule
 
 `timescale 1 ns / 1 ps
-module mmWBramWriter_buffer(
+module mmWBramWriter_buffer_V(
     reset,
     clk,
     address0,
@@ -56,7 +56,7 @@ output[DataWidth - 1:0] q0;
 
 
 
-mmWBramWriter_buffer_ram mmWBramWriter_buffer_ram_U(
+mmWBramWriter_buffer_V_ram mmWBramWriter_buffer_V_ram_U(
     .clk( clk ),
     .addr0( address0 ),
     .ce0( ce0 ),

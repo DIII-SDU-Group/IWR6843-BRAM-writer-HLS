@@ -1,96 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1648564469800">
-  <ports id="1" name="buffer_in" type="PortType" coreName="RAM" coreId="2932966896" bitwidth="128" iftype="IfTypeRegister" arraysize="32">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1648565483524">
+  <ports id="1" name="buffer_in" type="PortType" coreName="RAM" coreId="2952790368" bitwidth="128" iftype="IfTypeRegister" arraysize="32">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="buffer_out" type="PortType" coreName="RAM" coreId="132" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="129">
+  <ports id="2" name="buffer_out" type="PortType" coreName="RAM" coreId="0" bitwidth="128" direction="DirOut" iftype="IfTypeRegister" arraysize="33">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <edges id="64" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.1"/>
-  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="66" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="69" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="70" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
-  <edges id="71" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
-  <edges id="74" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
-  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
-  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
-  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
-  <edges id="82" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
-  <edges id="83" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
-  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
-  <edges id="85" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
-  <edges id="88" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
-  <edges id="89" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="90" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
-  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
-  <edges id="95" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
-  <edges id="96" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
-  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
-  <edges id="98" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
-  <edges id="99" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
-  <edges id="100" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
-  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
-  <edges id="102" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
-  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
-  <edges id="105" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
-  <edges id="106" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
-  <edges id="107" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
-  <edges id="108" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.1"/>
-  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="112" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="116" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.1/@node_objs.3"/>
-  <edges id="117" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="118" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="121" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
-  <edges id="122" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
-  <edges id="125" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
-  <edges id="126" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
-  <edges id="127" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
-  <edges id="128" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
-  <edges id="129" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
-  <edges id="132" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
-  <edges id="136" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
-  <edges id="137" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
-  <edges id="139" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
-  <edges id="140" source_obj="//@regions.1/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
-  <edges id="141" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
-  <edges id="144" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
-  <edges id="147" source_obj="//@regions.1/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
-  <edges id="148" source_obj="//@regions.1/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
-  <edges id="149" source_obj="//@regions.1/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
-  <edges id="150" source_obj="//@regions.1/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
-  <edges id="151" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
-  <edges id="152" source_obj="//@regions.1/@basic_blocks.1/@node_objs.10" sink_obj="//@ports.1"/>
-  <edges id="154" source_obj="//@regions.1/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.10"/>
-  <edges id="155" source_obj="//@regions.1/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.11"/>
-  <edges id="156" source_obj="//@regions.1/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.11"/>
-  <edges id="157" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.12"/>
-  <edges id="258" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
-  <edges id="259" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
-  <edges id="260" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
-  <edges id="261" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
-  <edges id="262" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0"/>
-  <edges id="263" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.2"/>
-  <edges id="264" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
-  <edges id="265" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="58" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="60" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="63" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="65" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="68" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="76" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="77" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="79" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="84" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="103" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.1"/>
+  <edges id="106" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="107" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="108" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="109" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="110" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="113" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="114" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="117" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="119" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="122" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="123" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="125" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="126" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="127" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="128" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@ports.1"/>
+  <edges id="130" source_obj="//@regions.1/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
+  <edges id="131" source_obj="//@regions.1/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="132" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="133" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="234" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="235" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="236" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="237" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="238" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="239" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="240" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
   <blocks id="11" name="block_11" type="BlockType">
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_19</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="buffer" rtlName="buffer_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" bitwidth="128" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="buffer_V" lineNumber="19" originalName="buffer.V" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="buffer_V_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mmWBramWriter" bitwidth="128" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="19" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="mmWBramWriter"/>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln29" lineNumber="29" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="132" contextFuncName="loadBuffer" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="29" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="49" contextFuncName="loadBuffer" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
       <controlInputObjs>block_19</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="mmWaveBramWriter.cpp">
-      <validLinenumbers>29</validLinenumbers>
+      <validLinenumbers>19</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="38" name="_Z10loadBufferP7ap_uintILi128EES1_.exit" type="BlockType">
@@ -98,44 +93,45 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_44</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="buffer_out_addr" lineNumber="46" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="2933031904" contextFuncName="writeBuffer" bitwidth="8" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="46" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sext_ln301" lineNumber="301" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" fileDirectory=".." rtlName="sext_ln301_fu_200_p1" coreId="1797268061" contextFuncName="ap_uint" bitwidth="128" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="301" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="ap_uint"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="buffer_out_addr" lineNumber="49" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="539111991" contextFuncName="writeBuffer" bitwidth="6" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="49" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
       <dataOutputObjs>buffer_out</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="buffer_out_addr_write_ln46" lineNumber="46" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeBuffer" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.35" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="46" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-      <dataInputObjs>phi</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="buffer_out_addr_write_ln49" lineNumber="49" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeBuffer" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.35" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="49" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="empty_10" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="empty_10_fu_210_p2" coreId="2933007480" contextFuncName="loadBuffer" bitwidth="32" opcode="shl" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln48" lineNumber="48" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="84" contextFuncName="writeBuffer" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.48" m_topoIndex="23" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="48" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln51" lineNumber="51" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="543516513" contextFuncName="writeBuffer" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.48" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="51" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
       <controlInputObjs>block_44</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="mmWaveBramWriter.cpp">
-      <validLinenumbers>46</validLinenumbers>
-      <validLinenumbers>31</validLinenumbers>
-      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h">
+      <validLinenumbers>301</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="61" name="_Z11writeBufferP7ap_uintILi128EEPjj.exit.loopexit" type="BlockType">
+  <blocks id="55" name="_Z11writeBufferP7ap_uintILi128EES1_i.exit.loopexit" type="BlockType">
     <controlInputObjs>block_44</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln23" lineNumber="23" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="3892314240" contextFuncName="mmWBramWriter" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="23" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="mmWBramWriter"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln25" lineNumber="25" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="mmWBramWriter" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="25" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="mmWBramWriter"/>
     </node_objs>
     <fileValidLineNumbers fileName="mmWaveBramWriter.cpp">
-      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="228" pipe_depth="2" RegionName="load_loop">
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="202" pipe_depth="2" RegionName="load_loop">
     <basic_blocks id="19" name="block_19" type="BlockType">
       <controlInputObjs>block_11</controlInputObjs>
       <controlInputObjs>.split2</controlInputObjs>
@@ -143,8 +139,8 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z10loadBufferP7ap_uintILi128EES1_.exit</controlOutputObjs>
       <controlOutputObjs>.split2</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_2" lineNumber="29" originalName="i" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" bitwidth="6" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="29" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_2" lineNumber="31" originalName="i" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" bitwidth="6" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -158,32 +154,32 @@
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <dataOutputObjs>shl</dataOutputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
         <controlInputObjs>.split2</controlInputObjs>
         <controlInputObjs>block_11</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="add_ln29" lineNumber="29" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="add_ln29_fu_159_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="loadBuffer" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="5" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="29" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="add_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="add_ln31_fu_149_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="loadBuffer" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="icmp_ln29" lineNumber="29" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="icmp_ln29_fu_165_p2" opType="icmp" coreId="241" contextFuncName="loadBuffer" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="6" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="29" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="icmp_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="icmp_ln31_fu_155_p2" opType="icmp" coreId="273" contextFuncName="loadBuffer" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln29" lineNumber="29" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="29" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split2</controlInputObjs>
         <controlInputObjs>_Z10loadBufferP7ap_uintILi128EES1_.exit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="mmWaveBramWriter.cpp">
-        <validLinenumbers>29</validLinenumbers>
+        <validLinenumbers>31</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="33" name=".split2" type="BlockType">
@@ -192,8 +188,8 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_19</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="i_2_cast" lineNumber="29" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="i_2_cast_fu_171_p1" coreId="0" contextFuncName="loadBuffer" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="29" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="i_2_cast" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="i_2_cast_fu_161_p1" coreId="0" contextFuncName="loadBuffer" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -211,186 +207,152 @@
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="icmp_ln870" lineNumber="870" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln870_fu_176_p2" opType="icmp" coreId="0" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.46" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="icmp_ln870" lineNumber="870" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln870_fu_166_p2" opType="icmp" coreId="49" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.46" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="870" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="operator==&amp;lt;32, true&amp;gt;"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="icmp_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="icmp_ln31_fu_182_p2" opType="icmp" coreId="3892314240" contextFuncName="loadBuffer" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.11" m_topoIndex="12" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="icmp_ln33" lineNumber="33" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="icmp_ln33_fu_172_p2" opType="icmp" coreId="1993384704" contextFuncName="loadBuffer" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.11" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="33" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="and_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="and_ln31_fu_188_p2" opType="and" coreId="49" contextFuncName="loadBuffer" bitwidth="1" opcode="and" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="and_ln33" lineNumber="33" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="and_ln33_fu_178_p2" opType="and" coreId="0" contextFuncName="loadBuffer" bitwidth="1" opcode="and" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="33" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="trunc_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="trunc_ln31_fu_194_p1" coreId="84" contextFuncName="loadBuffer" bitwidth="5" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="trunc_ln33" lineNumber="33" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="trunc_ln33_fu_184_p1" coreId="0" contextFuncName="loadBuffer" bitwidth="5" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="33" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln31" lineNumber="31" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="zext_ln31_fu_198_p1" coreId="2933027920" contextFuncName="loadBuffer" bitwidth="32" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln33" lineNumber="33" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="zext_ln33_fu_188_p1" coreId="0" contextFuncName="loadBuffer" bitwidth="32" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="33" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="n_points_3" lineNumber="31" originalName="n_points" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="n_points_3_fu_202_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="loadBuffer" bitwidth="32" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.52" m_topoIndex="16" m_clusterGroupNumber="1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="31" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="n_points_3" lineNumber="33" originalName="n_points" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="n_points_3_fu_192_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="loadBuffer" bitwidth="32" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.52" m_topoIndex="16" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="33" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>and</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="buffer_addr" lineNumber="37" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="84" contextFuncName="loadBuffer" bitwidth="5" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="37" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="buffer_V_addr" lineNumber="39" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="543517801" contextFuncName="loadBuffer" bitwidth="5" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="39" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="buffer_addr_write_ln37" lineNumber="37" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="loadBuffer" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.35" m_topoIndex="18" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="37" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="buffer_V_addr_write_ln39" lineNumber="39" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="loadBuffer" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.35" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="39" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="loadBuffer"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln0" coreId="2932813840" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln0" coreId="1113945697" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <controlInputObjs>block_19</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="mmWaveBramWriter.cpp">
-        <validLinenumbers>29</validLinenumbers>
         <validLinenumbers>31</validLinenumbers>
-        <validLinenumbers>37</validLinenumbers>
+        <validLinenumbers>33</validLinenumbers>
+        <validLinenumbers>39</validLinenumbers>
       </fileValidLineNumbers>
       <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
         <validLinenumbers>870</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
-  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="229" pipe_depth="2" RegionName="write_loop">
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="203" pipe_depth="2" RegionName="write_loop">
     <basic_blocks id="44" name="block_44" type="BlockType">
       <controlInputObjs>_Z10loadBufferP7ap_uintILi128EES1_.exit</controlInputObjs>
       <controlInputObjs>.split</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>_Z11writeBufferP7ap_uintILi128EEPjj.exit.loopexit</controlOutputObjs>
+      <controlOutputObjs>_Z11writeBufferP7ap_uintILi128EES1_i.exit.loopexit</controlOutputObjs>
       <controlOutputObjs>.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="i" lineNumber="50" originalName="i" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="1634692155" contextFuncName="writeBuffer" bitwidth="32" opcode="phi" nodeLabel="4.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="i" lineNumber="53" originalName="i" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="writeBuffer" bitwidth="32" opcode="phi" nodeLabel="4.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
-        <dataOutputObjs>partselect</dataOutputObjs>
-        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
         <controlInputObjs>.split</controlInputObjs>
         <controlInputObjs>_Z10loadBufferP7ap_uintILi128EES1_.exit</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="add_ln50" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="add_ln50_fu_216_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeBuffer" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.2" m_topoIndex="25" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="add_ln53" lineNumber="53" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="add_ln53_fu_205_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeBuffer" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.2" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="icmp_ln48" lineNumber="48" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="icmp_ln48_fu_222_p2" opType="icmp" coreId="2932966416" contextFuncName="writeBuffer" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.11" m_topoIndex="26" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="48" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="icmp_ln51" lineNumber="51" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="icmp_ln51_fu_211_p2" opType="icmp" coreId="49521" contextFuncName="writeBuffer" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.11" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="51" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
-        <dataInputObjs>shl</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="br_ln48" lineNumber="48" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="writeBuffer" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="48" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="br_ln51" lineNumber="51" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="1993427856" contextFuncName="writeBuffer" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="51" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split</controlInputObjs>
-        <controlInputObjs>_Z11writeBufferP7ap_uintILi128EEPjj.exit.loopexit</controlInputObjs>
+        <controlInputObjs>_Z11writeBufferP7ap_uintILi128EES1_i.exit.loopexit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="mmWaveBramWriter.cpp">
-        <validLinenumbers>50</validLinenumbers>
-        <validLinenumbers>48</validLinenumbers>
+        <validLinenumbers>53</validLinenumbers>
+        <validLinenumbers>51</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="59" name=".split" type="BlockType">
+    <basic_blocks id="53" name=".split" type="BlockType">
       <controlInputObjs>block_44</controlInputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_44</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="lshr_ln50_1" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="lshr_ln50_1_fu_227_p4" coreId="44257" contextFuncName="writeBuffer" bitwidth="5" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="i_cast" lineNumber="53" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="i_cast_fu_217_p1" coreId="1993428984" contextFuncName="writeBuffer" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>zext</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="zext_ln50" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="zext_ln50_fu_237_p1" coreId="20" contextFuncName="writeBuffer" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="buffer_addr_1" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="0" contextFuncName="writeBuffer" bitwidth="5" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="buffer_V_addr_1" lineNumber="53" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="132" contextFuncName="writeBuffer" bitwidth="5" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="buffer_load" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeBuffer" bitwidth="128" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="31" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>getelementptr</dataInputObjs>
-        <dataOutputObjs>lshr</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="trunc_ln50" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="trunc_ln50_fu_242_p1" coreId="132" contextFuncName="writeBuffer" bitwidth="2" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>bitconcatenate</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="shl_ln50_1" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="shl_ln50_1_fu_246_p3" coreId="62" contextFuncName="writeBuffer" bitwidth="7" opcode="bitconcatenate" nodeLabel="5.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>trunc</dataInputObjs>
-        <dataOutputObjs>zext</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="zext_ln50_1" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="zext_ln50_1_fu_253_p1" coreId="2933070304" contextFuncName="writeBuffer" bitwidth="128" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>bitconcatenate</dataInputObjs>
-        <dataOutputObjs>lshr</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="lshr_ln50" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="lshr_ln50_fu_257_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="lshr" coreId="75" contextFuncName="writeBuffer" bitwidth="128" opcode="lshr" nodeLabel="5.0" m_display="0" m_delay="1.72" m_topoIndex="35" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>load</dataInputObjs>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>trunc</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="trunc_ln50_1" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="trunc_ln50_1_fu_263_p1" coreId="11" contextFuncName="writeBuffer" bitwidth="32" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>lshr</dataInputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="zext_ln50_2" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="zext_ln50_2_fu_268_p1" coreId="0" contextFuncName="writeBuffer" bitwidth="64" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="zext_ln53" lineNumber="53" fileName="mmWaveBramWriter.cpp" fileDirectory=".." rtlName="zext_ln53_fu_222_p1" coreId="825307437" contextFuncName="writeBuffer" bitwidth="64" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="buffer_out_addr_1" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="825307437" contextFuncName="writeBuffer" bitwidth="8" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="buffer_V_load" lineNumber="53" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeBuffer" bitwidth="128" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="buffer_out_addr_1" lineNumber="53" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreId="132" contextFuncName="writeBuffer" bitwidth="6" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>buffer_out</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="buffer_out_addr_1_write_ln50" lineNumber="50" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeBuffer" opcode="store" nodeLabel="5.0" m_display="0" m_delay="1.35" m_topoIndex="39" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
-        <dataInputObjs>trunc</dataInputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="buffer_out_addr_1_write_ln53" lineNumber="53" fileName="mmWaveBramWriter.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeBuffer" opcode="store" nodeLabel="5.0" m_display="0" m_delay="1.35" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mmWaveBramWriter.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/IWR6843-BRAM-writer-HLS/HLS" functionName="writeBuffer"/>
+        <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln0" coreId="0" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="br_ln0" coreId="1993435001" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
         <controlInputObjs>block_44</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="mmWaveBramWriter.cpp">
-        <validLinenumbers>50</validLinenumbers>
+        <validLinenumbers>53</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -401,133 +363,109 @@
   <ScheduleInfo time="4"/>
   <ScheduleInfo time="5"/>
   <ScheduleInfo time="6"/>
-  <regnodes realName="n_points_reg_135">
+  <regnodes realName="n_points_reg_126">
     <nodeIds>13</nodeIds>
   </regnodes>
-  <regnodes realName="trunc_ln50_reg_316">
-    <nodeIds>50</nodeIds>
-  </regnodes>
-  <regnodes realName="add_ln29_reg_272">
-    <nodeIds>14</nodeIds>
-  </regnodes>
-  <regnodes realName="add_ln50_reg_301">
+  <regnodes realName="add_ln53_reg_250">
     <nodeIds>40</nodeIds>
   </regnodes>
-  <regnodes realName="buffer_addr_1_reg_311">
-    <nodeIds>48</nodeIds>
+  <regnodes realName="i_2_reg_114">
+    <nodeIds>12</nodeIds>
   </regnodes>
-  <regnodes realName="icmp_ln29_reg_277">
+  <regnodes realName="n_points_3_reg_245">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln31_reg_231">
     <nodeIds>16</nodeIds>
   </regnodes>
-  <regnodes realName="empty_10_reg_296">
-    <nodeIds>36</nodeIds>
-  </regnodes>
-  <regnodes realName="i_reg_148">
-    <nodeIds>39</nodeIds>
-  </regnodes>
-  <regnodes realName="i_2_cast_reg_281">
-    <nodeIds>20</nodeIds>
-  </regnodes>
-  <regnodes realName="icmp_ln48_reg_307">
+  <regnodes realName="icmp_ln51_reg_256">
     <nodeIds>42</nodeIds>
   </regnodes>
-  <regnodes realName="i_2_reg_123">
-    <nodeIds>12</nodeIds>
-  </regnodes>
-  <regnodes realName="n_points_3_reg_291">
-    <nodeIds>29</nodeIds>
-  </regnodes>
-  <regnodes realName="buffer_in_addr_reg_286">
+  <regnodes realName="buffer_in_addr_reg_240">
     <nodeIds>22</nodeIds>
   </regnodes>
-  <expressionNodes realName="buffer_alloca_fu_64">
-    <nodeIds>9</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln50_1_fu_253">
-    <nodeIds>52</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln50_fu_216">
-    <nodeIds>40</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln31_fu_182">
-    <nodeIds>25</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="buffer_out_addr_1_gep_fu_115">
-    <nodeIds>56</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="buffer_out_addr_gep_fu_94">
-    <nodeIds>34</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="buffer_in_addr_gep_fu_68">
-    <nodeIds>22</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_2_cast_fu_171">
+  <regnodes realName="i_reg_138">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="buffer_V_addr_1_reg_260">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="i_2_cast_reg_235">
     <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln31_reg_226">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i_cast_fu_217">
+    <nodeIds>45</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="n_points_3_fu_202">
-    <nodeIds>29</nodeIds>
+  <expressionNodes realName="icmp_ln31_fu_155">
+    <nodeIds>16</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="empty_10_fu_210">
-    <nodeIds>36</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="lshr_ln50_fu_257">
-    <nodeIds>53</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_2_phi_fu_127">
-    <nodeIds>12</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="buffer_addr_gep_fu_81">
-    <nodeIds>30</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_phi_fu_152">
+  <expressionNodes realName="i_phi_fu_142">
     <nodeIds>39</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln50_2_fu_268">
-    <nodeIds>55</nodeIds>
+  <expressionNodes realName="add_ln53_fu_205">
+    <nodeIds>40</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln870_fu_176">
+  <expressionNodes realName="icmp_ln51_fu_211">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln870_fu_166">
     <nodeIds>24</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="buffer_addr_1_gep_fu_108">
-    <nodeIds>48</nodeIds>
+  <expressionNodes realName="n_points_3_fu_192">
+    <nodeIds>29</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln50_1_fu_263">
-    <nodeIds>54</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln50_fu_242">
-    <nodeIds>50</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln50_fu_237">
-    <nodeIds>47</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="shl_ln50_1_fu_246">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln48_fu_222">
-    <nodeIds>42</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln31_fu_198">
-    <nodeIds>28</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln31_fu_194">
-    <nodeIds>27</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="and_ln31_fu_188">
-    <nodeIds>26</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln29_fu_165">
-    <nodeIds>16</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="n_points_phi_fu_140">
-    <nodeIds>13</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="lshr_ln50_1_fu_227">
-    <nodeIds>46</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln29_fu_159">
+  <expressionNodes realName="add_ln31_fu_149">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <memoryPorts dataString="buffer">
+  <expressionNodes realName="buffer_V_alloca_fu_54">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln33_fu_172">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_out_addr_1_gep_fu_105">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_out_addr_gep_fu_84">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln53_fu_222">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_V_addr_1_gep_fu_98">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_in_addr_gep_fu_58">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_2_cast_fu_161">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="n_points_phi_fu_130">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_2_phi_fu_118">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln301_fu_200">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln33_fu_178">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_V_addr_gep_fu_71">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln33_fu_184">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln33_fu_188">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <memoryPorts dataString="buffer_V">
     <nodeIds>31</nodeIds>
     <nodeIds>49</nodeIds>
   </memoryPorts>
@@ -535,8 +473,8 @@
     <nodeIds>23</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="buffer_out">
-    <nodeIds>35</nodeIds>
-    <nodeIds>57</nodeIds>
+    <nodeIds>36</nodeIds>
+    <nodeIds>51</nodeIds>
   </memoryPorts>
   <ioPorts name="buffer_in(p0)">
     <contents name="load">
@@ -545,8 +483,8 @@
   </ioPorts>
   <ioPorts name="buffer_out(p0)">
     <contents name="store">
-      <nodeIds>35</nodeIds>
-      <nodeIds>57</nodeIds>
+      <nodeIds>36</nodeIds>
+      <nodeIds>51</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
@@ -597,26 +535,20 @@
       <operations id="41" stage="1" latency="1"/>
       <operations id="42" stage="1" latency="1"/>
       <operations id="43" stage="1" latency="1"/>
-      <operations id="46" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
       <operations id="47" stage="1" latency="1"/>
-      <operations id="48" stage="1" latency="1"/>
       <operations id="49" stage="2" latency="2"/>
-      <operations id="50" stage="1" latency="1"/>
     </states>
     <states id="6">
-      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
       <operations id="49" stage="1" latency="2"/>
+      <operations id="50" stage="1" latency="1"/>
       <operations id="51" stage="1" latency="1"/>
       <operations id="52" stage="1" latency="1"/>
-      <operations id="53" stage="1" latency="1"/>
-      <operations id="54" stage="1" latency="1"/>
-      <operations id="55" stage="1" latency="1"/>
-      <operations id="56" stage="1" latency="1"/>
-      <operations id="57" stage="1" latency="1"/>
-      <operations id="58" stage="1" latency="1"/>
     </states>
     <states id="7">
-      <operations id="60" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
@@ -667,11 +599,11 @@
     </cfgRegions>
     <cfgRegions mId="5" mTag="write_loop" mII="1" mDepth="2" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
       <basicBlocks>44</basicBlocks>
-      <basicBlocks>59</basicBlocks>
+      <basicBlocks>53</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
     <cfgRegions mId="6" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>61</basicBlocks>
+      <basicBlocks>55</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

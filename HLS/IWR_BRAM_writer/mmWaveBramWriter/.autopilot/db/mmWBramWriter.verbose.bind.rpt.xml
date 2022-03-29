@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mmWBramWriter'" level="0">
-<item name = "Date">Tue Mar 29 16:34:29 2022
+<item name = "Date">Tue Mar 29 16:51:23 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">IWR_BRAM_writer</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 4.424 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 3.338 ns, 2.70 ns</column>
 </table>
 </item>
 </section>

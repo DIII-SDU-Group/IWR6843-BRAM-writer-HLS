@@ -47,8 +47,8 @@
     "buffer_out": {
       "index": "1",
       "direction": "out",
-      "srcType": "unsigned int*",
-      "srcSize": "32",
+      "srcType": "ap_uint<128>*",
+      "srcSize": "128",
       "hwRefs": [
         {
           "type": "port",
@@ -120,12 +120,12 @@
   "Files": {
     "CSource": ["..\/..\/mmWaveBramWriter.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/mmWBramWriter_buffer.vhd",
+      "impl\/vhdl\/mmWBramWriter_buffer_V.vhd",
       "impl\/vhdl\/mmWBramWriter_control_s_axi.vhd",
       "impl\/vhdl\/mmWBramWriter.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/mmWBramWriter_buffer.v",
+      "impl\/verilog\/mmWBramWriter_buffer_V.v",
       "impl\/verilog\/mmWBramWriter_control_s_axi.v",
       "impl\/verilog\/mmWBramWriter.v"
     ],
@@ -201,7 +201,7 @@
       "type": "data",
       "busTypeName": "data",
       "mode": "master",
-      "dataWidth": "8",
+      "dataWidth": "6",
       "portMap": {"buffer_out_address0": "DATA"},
       "ports": ["buffer_out_address0"],
       "constraints": [{
@@ -215,7 +215,7 @@
       "type": "data",
       "busTypeName": "data",
       "mode": "master",
-      "dataWidth": "32",
+      "dataWidth": "128",
       "portMap": {"buffer_out_d0": "DATA"},
       "ports": ["buffer_out_d0"],
       "constraints": [{
@@ -520,7 +520,7 @@
     },
     "buffer_out_address0": {
       "dir": "out",
-      "width": "8"
+      "width": "6"
     },
     "buffer_out_ce0": {
       "dir": "out",
@@ -532,7 +532,7 @@
     },
     "buffer_out_d0": {
       "dir": "out",
-      "width": "32"
+      "width": "128"
     }
   },
   "ModuleInfo": {
@@ -556,7 +556,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "4.424"
+          "Estimate": "3.338"
         },
         "Loops": [
           {
@@ -578,12 +578,12 @@
           "BRAM_18K": "4",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "~0",
-          "FF": "193",
+          "FF": "161",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "803",
+          "LUT": "380",
           "AVAIL_LUT": "70560",
-          "UTIL_LUT": "1",
+          "UTIL_LUT": "~0",
           "DSP": "0",
           "AVAIL_DSP": "360",
           "UTIL_DSP": "0",
@@ -596,7 +596,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-29 16:34:30 CEST",
+    "Time": "2022-03-29 16:51:24 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

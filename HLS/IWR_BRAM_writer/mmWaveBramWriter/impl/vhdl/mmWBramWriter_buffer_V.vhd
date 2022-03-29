@@ -7,7 +7,7 @@ library ieee;
 use ieee.std_logic_1164.all; 
 use ieee.std_logic_unsigned.all;
 
-entity mmWBramWriter_buffer_ram is 
+entity mmWBramWriter_buffer_V_ram is 
     generic(
             DWIDTH     : integer := 128; 
             AWIDTH     : integer := 5; 
@@ -24,7 +24,7 @@ entity mmWBramWriter_buffer_ram is
 end entity; 
 
 
-architecture rtl of mmWBramWriter_buffer_ram is 
+architecture rtl of mmWBramWriter_buffer_V_ram is 
 
 signal addr0_tmp : std_logic_vector(AWIDTH-1 downto 0); 
 type mem_array is array (0 to MEM_SIZE-1) of std_logic_vector (DWIDTH-1 downto 0); 
@@ -64,7 +64,7 @@ end rtl;
 Library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity mmWBramWriter_buffer is
+entity mmWBramWriter_buffer_V is
     generic (
         DataWidth : INTEGER := 128;
         AddressRange : INTEGER := 32;
@@ -79,8 +79,8 @@ entity mmWBramWriter_buffer is
         q0 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0));
 end entity;
 
-architecture arch of mmWBramWriter_buffer is
-    component mmWBramWriter_buffer_ram is
+architecture arch of mmWBramWriter_buffer_V is
+    component mmWBramWriter_buffer_V_ram is
         port (
             clk : IN STD_LOGIC;
             addr0 : IN STD_LOGIC_VECTOR;
@@ -93,7 +93,7 @@ architecture arch of mmWBramWriter_buffer is
 
 
 begin
-    mmWBramWriter_buffer_ram_U :  component mmWBramWriter_buffer_ram
+    mmWBramWriter_buffer_V_ram_U :  component mmWBramWriter_buffer_V_ram
     port map (
         clk => clk,
         addr0 => address0,

@@ -8,25 +8,25 @@ target triple = "fpga64-xilinx-none"
 %struct.ssdm_int = type { i128 }
 
 ; Function Attrs: noinline
-define void @apatb_mmWBramWriter_ir(%struct.ap_uint* %buffer_in, i32* %buffer_out) local_unnamed_addr #0 {
+define void @apatb_mmWBramWriter_ir(%struct.ap_uint* %buffer_in, %struct.ap_uint* %buffer_out) local_unnamed_addr #0 {
 entry:
   %buffer_in_copy = alloca [32 x %struct.ap_uint], align 512
-  %buffer_out_copy = alloca [129 x i32], align 512
+  %buffer_out_copy = alloca [33 x %struct.ap_uint], align 512
   %0 = bitcast %struct.ap_uint* %buffer_in to [32 x %struct.ap_uint]*
-  %1 = bitcast i32* %buffer_out to [129 x i32]*
-  call fastcc void @copy_in([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [129 x i32]* %1, [129 x i32]* nonnull align 512 %buffer_out_copy)
+  %1 = bitcast %struct.ap_uint* %buffer_out to [33 x %struct.ap_uint]*
+  call fastcc void @copy_in([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [33 x %struct.ap_uint]* %1, [33 x %struct.ap_uint]* nonnull align 512 %buffer_out_copy)
   %2 = getelementptr inbounds [32 x %struct.ap_uint], [32 x %struct.ap_uint]* %buffer_in_copy, i32 0, i32 0
-  %3 = getelementptr inbounds [129 x i32], [129 x i32]* %buffer_out_copy, i32 0, i32 0
-  call void @apatb_mmWBramWriter_hw(%struct.ap_uint* %2, i32* %3)
-  call fastcc void @copy_out([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [129 x i32]* %1, [129 x i32]* nonnull align 512 %buffer_out_copy)
+  %3 = getelementptr inbounds [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %buffer_out_copy, i32 0, i32 0
+  call void @apatb_mmWBramWriter_hw(%struct.ap_uint* %2, %struct.ap_uint* %3)
+  call fastcc void @copy_out([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* nonnull align 512 %buffer_in_copy, [33 x %struct.ap_uint]* %1, [33 x %struct.ap_uint]* nonnull align 512 %buffer_out_copy)
   ret void
 }
 
 ; Function Attrs: noinline
-define internal fastcc void @copy_in([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [129 x i32]* readonly, [129 x i32]* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [33 x %struct.ap_uint]*, [33 x %struct.ap_uint]* noalias align 512) unnamed_addr #1 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a32struct.ap_uint([32 x %struct.ap_uint]* align 512 %1, [32 x %struct.ap_uint]* %0)
-  call fastcc void @onebyonecpy_hls.p0a129i32([129 x i32]* align 512 %3, [129 x i32]* %2)
+  call fastcc void @onebyonecpy_hls.p0a33struct.ap_uint([33 x %struct.ap_uint]* align 512 %3, [33 x %struct.ap_uint]* %2)
   ret void
 }
 
@@ -181,55 +181,91 @@ ret:                                              ; preds = %empty
   ret void
 }
 
-; Function Attrs: argmemonly noinline
-define internal fastcc void @onebyonecpy_hls.p0a129i32([129 x i32]* noalias align 512, [129 x i32]* noalias readonly) unnamed_addr #5 {
+; Function Attrs: noinline
+define internal fastcc void @onebyonecpy_hls.p0a33struct.ap_uint([33 x %struct.ap_uint]* noalias align 512, [33 x %struct.ap_uint]* noalias) unnamed_addr #2 {
 entry:
-  %2 = icmp eq [129 x i32]* %0, null
-  %3 = icmp eq [129 x i32]* %1, null
+  %2 = icmp eq [33 x %struct.ap_uint]* %0, null
+  %3 = icmp eq [33 x %struct.ap_uint]* %1, null
   %4 = or i1 %2, %3
   br i1 %4, label %ret, label %copy
 
 copy:                                             ; preds = %entry
   br label %for.loop
 
-for.loop:                                         ; preds = %for.loop, %copy
-  %for.loop.idx3 = phi i64 [ 0, %copy ], [ %for.loop.idx.next, %for.loop ]
-  %dst.addr.gep1 = getelementptr [129 x i32], [129 x i32]* %0, i64 0, i64 %for.loop.idx3
-  %5 = bitcast i32* %dst.addr.gep1 to i8*
-  %src.addr.gep2 = getelementptr [129 x i32], [129 x i32]* %1, i64 0, i64 %for.loop.idx3
-  %6 = bitcast i32* %src.addr.gep2 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %5, i8* align 1 %6, i64 4, i1 false)
-  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx3, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, 129
+for.loop:                                         ; preds = %for.loop.head, %copy
+  %for.loop.idx9 = phi i64 [ 0, %copy ], [ %for.loop.idx.next, %for.loop.head ]
+  %dst.addr = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %0, i64 0, i64 %for.loop.idx9
+  %src.addr = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %1, i64 0, i64 %for.loop.idx9
+  %5 = bitcast %struct.ap_uint* %src.addr to i8*
+  %6 = call i1 @fpga_fifo_exist_16(i8* %5)
+  br i1 %6, label %7, label %8
+
+; <label>:7:                                      ; preds = %for.loop
+  call fastcc void @streamcpy_hls.p0struct.ap_uint(%struct.ap_uint* align 16 %dst.addr, %struct.ap_uint* %src.addr)
+  br label %for.loop.head
+
+; <label>:8:                                      ; preds = %for.loop
+  %src.addr.01 = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %1, i64 0, i64 %for.loop.idx9, i32 0
+  %dst.addr.02 = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %0, i64 0, i64 %for.loop.idx9, i32 0
+  %9 = bitcast %struct.ap_int_base* %src.addr.01 to i8*
+  %10 = call i1 @fpga_fifo_exist_16(i8* %9)
+  br i1 %10, label %11, label %12
+
+; <label>:11:                                     ; preds = %8
+  call fastcc void @streamcpy_hls.p0struct.ap_int_base(%struct.ap_int_base* align 16 %dst.addr.02, %struct.ap_int_base* %src.addr.01)
+  br label %for.loop.head
+
+; <label>:12:                                     ; preds = %8
+  %src.addr.0.03 = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %1, i64 0, i64 %for.loop.idx9, i32 0, i32 0
+  %dst.addr.0.04 = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %0, i64 0, i64 %for.loop.idx9, i32 0, i32 0
+  %13 = bitcast %struct.ssdm_int* %src.addr.0.03 to i8*
+  %14 = call i1 @fpga_fifo_exist_16(i8* %13)
+  br i1 %14, label %15, label %16
+
+; <label>:15:                                     ; preds = %12
+  call fastcc void @streamcpy_hls.p0struct.ssdm_int(%struct.ssdm_int* align 16 %dst.addr.0.04, %struct.ssdm_int* %src.addr.0.03)
+  br label %for.loop.head
+
+; <label>:16:                                     ; preds = %12
+  %dst.addr.0.0.06.gep7 = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %0, i64 0, i64 %for.loop.idx9, i32 0, i32 0, i32 0
+  %17 = bitcast i128* %dst.addr.0.0.06.gep7 to i8*
+  %src.addr.0.0.05.gep8 = getelementptr [33 x %struct.ap_uint], [33 x %struct.ap_uint]* %1, i64 0, i64 %for.loop.idx9, i32 0, i32 0, i32 0
+  %18 = bitcast i128* %src.addr.0.0.05.gep8 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %17, i8* align 1 %18, i64 16, i1 false)
+  br label %for.loop.head
+
+for.loop.head:                                    ; preds = %16, %15, %11, %7
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx9, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, 33
   br i1 %exitcond, label %for.loop, label %ret
 
-ret:                                              ; preds = %for.loop, %entry
+ret:                                              ; preds = %for.loop.head, %entry
   ret void
 }
 
 ; Function Attrs: noinline
-define internal fastcc void @copy_out([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [129 x i32]*, [129 x i32]* noalias readonly align 512) unnamed_addr #6 {
+define internal fastcc void @copy_out([32 x %struct.ap_uint]*, [32 x %struct.ap_uint]* noalias align 512, [33 x %struct.ap_uint]*, [33 x %struct.ap_uint]* noalias align 512) unnamed_addr #5 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a32struct.ap_uint([32 x %struct.ap_uint]* %0, [32 x %struct.ap_uint]* align 512 %1)
-  call fastcc void @onebyonecpy_hls.p0a129i32([129 x i32]* %2, [129 x i32]* align 512 %3)
+  call fastcc void @onebyonecpy_hls.p0a33struct.ap_uint([33 x %struct.ap_uint]* %2, [33 x %struct.ap_uint]* align 512 %3)
   ret void
 }
 
-declare void @apatb_mmWBramWriter_hw(%struct.ap_uint*, i32*)
+declare void @apatb_mmWBramWriter_hw(%struct.ap_uint*, %struct.ap_uint*)
 
-define void @mmWBramWriter_hw_stub_wrapper(%struct.ap_uint*, i32*) #7 {
+define void @mmWBramWriter_hw_stub_wrapper(%struct.ap_uint*, %struct.ap_uint*) #6 {
 entry:
   %2 = bitcast %struct.ap_uint* %0 to [32 x %struct.ap_uint]*
-  %3 = bitcast i32* %1 to [129 x i32]*
-  call void @copy_out([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [129 x i32]* null, [129 x i32]* %3)
+  %3 = bitcast %struct.ap_uint* %1 to [33 x %struct.ap_uint]*
+  call void @copy_out([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [33 x %struct.ap_uint]* null, [33 x %struct.ap_uint]* %3)
   %4 = bitcast [32 x %struct.ap_uint]* %2 to %struct.ap_uint*
-  %5 = bitcast [129 x i32]* %3 to i32*
-  call void @mmWBramWriter_hw_stub(%struct.ap_uint* %4, i32* %5)
-  call void @copy_in([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [129 x i32]* null, [129 x i32]* %3)
+  %5 = bitcast [33 x %struct.ap_uint]* %3 to %struct.ap_uint*
+  call void @mmWBramWriter_hw_stub(%struct.ap_uint* %4, %struct.ap_uint* %5)
+  call void @copy_in([32 x %struct.ap_uint]* null, [32 x %struct.ap_uint]* %2, [33 x %struct.ap_uint]* null, [33 x %struct.ap_uint]* %3)
   ret void
 }
 
-declare void @mmWBramWriter_hw_stub(%struct.ap_uint*, i32*)
+declare void @mmWBramWriter_hw_stub(%struct.ap_uint*, %struct.ap_uint*)
 
 declare i1 @fpga_fifo_not_empty_16(i8*)
 
@@ -242,9 +278,8 @@ attributes #1 = { noinline "fpga.wrapper.func"="copyin" }
 attributes #2 = { noinline "fpga.wrapper.func"="onebyonecpy_hls" }
 attributes #3 = { argmemonly noinline "fpga.wrapper.func"="streamcpy_hls" }
 attributes #4 = { argmemonly nounwind }
-attributes #5 = { argmemonly noinline "fpga.wrapper.func"="onebyonecpy_hls" }
-attributes #6 = { noinline "fpga.wrapper.func"="copyout" }
-attributes #7 = { "fpga.wrapper.func"="stub" }
+attributes #5 = { noinline "fpga.wrapper.func"="copyout" }
+attributes #6 = { "fpga.wrapper.func"="stub" }
 
 !llvm.dbg.cu = !{}
 !llvm.ident = !{!0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0}
